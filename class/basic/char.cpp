@@ -6,6 +6,7 @@ int main (){
     auto number{43.9l};
     cout <<sizeof(number)<<endl;
     cout <<static_cast<int>(variable);
+    return 0;
 }
     
     
