@@ -6,6 +6,7 @@ using namespace std;
     for (int i=0;i<3;i++){
         if(max<a[i]){
             max=a[i];
+            
         }
     }
     cout<<max;
