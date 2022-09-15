@@ -1,3 +1,6 @@
+// Traversal || Program for traversing array elements.
+// Prabhoot Narayan Patel
+// 2100320100121
 #include <iostream>
 using namespace std;
 int main (){
@@ -6,6 +9,5 @@ int main (){
    for(int i=0;i<5;i++) {
     cout<<a[i]<<endl;
     }
-    //kc
     return 0;
 }
