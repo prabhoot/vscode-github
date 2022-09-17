@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int a[3]={1,7,8};
+    int a[3]={29,30,31};
     for(int i=0,j=(3-1);i<3;i++,j--){
         if(i<j){
             int temp=a[0];
@@ -14,8 +14,8 @@ int main(){
         }
     }
      for(int i=0;i<3;i++) {
-    cout<<a[i]<<endl;
+    cout<<a[i]<<" ";
     }
-   
+   cout<<endl;
     return 0;
 }

@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int a[69]={4,5,6,8,9,10};//7 missing
+    int a[69]={25,26,27,28,30};//29 missing
     int temp{};
     int missing_number{};
     for(int i=0;i<=5;i++){
@@ -11,6 +11,6 @@ int main(){
             temp++;
         }
     }
-   cout<<missing_number;
+   cout<<missing_number<<endl;
     return 0;
 }

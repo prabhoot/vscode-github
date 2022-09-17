@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int a[100]={1,8,13,34,55,60};//sorted array
+    int a[100]={5,8,11,13,25,29};//sorted array
     int no_to_insert{15};
     int i{};
     int loc{};
@@ -12,13 +12,14 @@ int main(){
         for(int i=6;i>=loc;i--){
             a[i]=a[i-1];
         }
-        temp++;//if condition is not enough temp is req
+        temp++;
         }
         i++;
     }
     a[loc]=no_to_insert;
     for(int i=0;i<6;i++){
-        cout<<a[i]<<endl;
+        cout<<a[i]<<" ";
     }
+    cout<<endl;
     return 0;
 }

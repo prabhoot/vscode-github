@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int a[100]={1,3,5,6,8,7};
+    int a[100]={1,4,9,15,29,35};
     int i{};
     int loc{};
-    int number_to_delete{3};
+    int number_to_delete{15};
     while(i<6){
         if(number_to_delete==a[i]){
             loc=i;
@@ -14,8 +14,9 @@ int main(){
         }
           i++;
     }
-    for(int i=0;i<6;i++){
-        cout<<a[i]<<endl;
+    for(int i=0;i<5;i++){
+        cout<<a[i]<<" ";
     }
+    cout<<endl;
     return 0;
 }
