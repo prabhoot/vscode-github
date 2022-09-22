@@ -11,6 +11,7 @@ int main(){
             temp++;
         }
     }
+    
    cout<<missing_number<<endl;
     return 0;
 }

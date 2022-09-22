@@ -16,7 +16,7 @@ int main() {
   }
   for (int i{}; i < m; i++) {
     for (int j{}; j < n; j++) {
-      cin >> b[i][j];
+      cin >> b[i][j];4
     }
   }
     cout<<"OUTPUT2 :"<<endl;

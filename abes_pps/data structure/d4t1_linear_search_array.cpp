@@ -4,11 +4,9 @@ int linear_search(int a[],int n,int search_key){
  for(int i{};i<n;i++){
   if(a[i]==search_key){
     cout<<i<<" is the index of the required key";
-    break;
+    return 0;}
   }
- else{cout<<"key is not present in the array";
- }
- }
+cout<<"key is not present in the array";
  return 0;
 }
 int main(){
