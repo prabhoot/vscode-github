@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
-int bin(int a[],int m,int low, int high,int search_key){
+int bin(int a[],int low, int high,int search_key){
     int mid{};
-while(low<=high){
     mid=(low+high)/2;
     if(a[mid]==search_key){
         return mid;
@@ -13,16 +12,17 @@ while(low<=high){
     else{
         low=mid+1;
     }
-}
+
 return -1;
 }
 int main(){
-int m{6};
 int search_key{7};
+int n{6};
+cin>>n;
 int a[]={3,5,7,8,9,10};
 int low{0};
-int high{5};
+int high{n-1};
 int mid{};
-cout<<bin(a, m,low,high,search_key);
+cout<<bin(a,low,high,search_key);
     return 0;
 }

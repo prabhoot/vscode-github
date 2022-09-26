@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>jai mata di</title>
+    </head>
+    <body>
+        <table border="10" cellspacing="1" cellpadding="1">
+            <tr>
+                <td colspan="2"><center>Pizza Shop 2.0</center></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><form action="/acction_page.php">
+                    <input type="text" id="fname" name="fname" value="" size="" maxlength=""></form></td>
+            </tr>
+            <tr rowspan="3">
+                <td>Pizza Topping</td>
+                    <td><form action="/acction_page.php"></form>
+                    <input type="radio" name="Supreme" value="on">Supreme<br>
+                    <input type="radio" name="Vegeterian" value="on">Vegeterian<br>
+                    <input type="radio" name="Hawaiian" value="on">Hawaiian<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Sauce</td>
+                <td>
+                <select name="dropdown">
+                    <option value="tomato" selected>tomato</option>
+                    <option value="paneer">paneer</option>
+                    <option value="capsicum">capsicum</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Optional Extras</td>
+                <td><input type="radio" name="extra cheese" value="on"> extra cheese
+                <input type="radio" name="gluten free base" value="on"> gluten free base</td>
+            </tr>
+            <tr>
+                <TD  colspan="2">
+                Delivery Instructions:<br>
+                <textarea rows="3" cols="40" name="description"></textarea><br>
+            </TD>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="text" value="send my order">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

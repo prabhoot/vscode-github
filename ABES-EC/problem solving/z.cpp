@@ -1,20 +1,28 @@
 #include <iostream>
+
 using namespace std;
-int main(){
-    double n;
-    double x;
-     double power{1};
-     int sign{1};
-    cin>>x>>n;
-    
-     double sum{1};
-    int factorial{1};
-    for(int i{1};i<n;i++){
-        factorial*=i;
-        power*=x*x;
-    sum+=(power/factorial)*sign;
-    sign*=-1;
+int reva(int a[],int i,int j,int n){
+    if(i>j){
+        return a[n];
     }
-    cout<<sum;
+    else{
+        cout<<a[i]
+    }
     return 0;
-} 
+}
+
+int main(){
+int m{};
+int i{},j;
+j={n-1};
+
+cin >> m >> n;
+int a[m];
+for (int i{}; i < m; i++) {
+
+cin >> a[i];
+  
+}
+  cout<< reva(a,i,j,m);
+    return 0;
+}

@@ -24,10 +24,10 @@ int main(){
 // for(int i{};i<n;i++){
 //  cin>>a[i];
 // }
-int search_key{};
+int search_key{3};
     int low{};
-    int high{};
-    cin>>low>>high>>search_key;
+    int high{n-1};
+  //  cin>>low>>high>>search_key;
 binary_search(a,n,low,high,search_key);
     return 0;
 }
