@@ -1,22 +1,21 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
-int reversal(int a[],int n){
-if(a[n]==0){
-    return a[n-1];
+
+// Utility function to print contents of an array
+
+
+// Utility function to reverse elements of an array
+void reverse(int arr[], int n) {
+	reverse(arr,arr+n);
 }
-else{
-    reversal(a, n);
-    cout<<a[n];
-}
-    return 0;
-}
-int main(){
-   int n{};
-  cin>>n;
-  int a[n];
-for(int i{};i<n;i++){
- cin>>a[i];
-}
-reversal(a, n);
-    return 0;
+int main()
+{
+	int arr[] = { 1, 2, 3, 4, 5 };
+	int n = sizeof(arr)/sizeof(arr[0]);
+	reverse(arr, n);
+for (int i = 0; i < n; i++) {
+		cout << arr[i] << " ";
+	}
+	return 0;
 }

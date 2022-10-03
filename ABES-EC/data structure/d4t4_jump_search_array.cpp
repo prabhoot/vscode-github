@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
-int linear_search(int arr[], int N, int x,int low,int high)
-{
-    int i=low;
-    for (; i < N; i++)
-        if (arr[i] == x){
-          cout<<x<<" found at index " <<i;
-          return i;
-        }
-      cout<<"not found";
-    return -1;
+int linear_search(int arr[], int N, int x, int low, int high) {
+  int i = low;
+  for (; i < N; i++)
+    if (arr[i] == x) {
+      cout << x << " found at index " << i;
+      return i;
+    }
+  cout << "not found";
+  return -1;
 }
 int jump_search(int a[], int n, int search_key, int low, int high, int jump) {
   while (low <= high) {
@@ -19,19 +18,19 @@ int jump_search(int a[], int n, int search_key, int low, int high, int jump) {
     } else if (a[low] < search_key) {
       low += jump;
     } else if (a[low] > search_key) {
-      high = low-1;
+      high = low - 1;
       low -= jump;
       linear_search(a, n, search_key, low, high);
       // return 0;
     } else {
       low += jump;
-       cout<<"@";
+      cout << "@";
     }
   }
-  if(low>n){cout<<search_key<<" not found in the given array";
-
+  if (low > n) {
+    cout << search_key << " not found in the given array";
   }
-  return 0; 
+  return 0;
 }
 
 int main() {
