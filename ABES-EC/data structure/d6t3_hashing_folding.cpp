@@ -21,25 +21,24 @@ void hf_folding(int n, int ts) {
   int temp{};
   int a=no_of_digits(ts-1);
   while(n!=0){
-    temp+=n%100;
-    n=n/100;
+    temp+=n%int(pow(10,a));
+    n=n/int(pow(10,a));
   }
-  int c=(pow(10,a));
-  cout<<temp%c;
+  cout<<temp<<endl;
 }
 int main() {
   int n{1};
   int no_to_save{};
   int v{};
-  int table_size{100};
- // cout << "enter table size";
-  //cin>>table_size;
-  //cout << "no. of elements  ";
- // cin >> n;
+  int table_size{};
+ cout << "enter table size";
+  cin>>table_size;
+  cout << "no. of elements  ";
+ cin >> n;
   int a[n];
-  //for (int i = 0; i < n; i++) {
-   // cin >> a[i];
-    hf_folding(66874, table_size);
- // }
+  for (int i = 0; i < n; i++) {
+   cin >> a[i];
+    hf_folding(a[i], table_size);
+ }
   return 0;
 }
