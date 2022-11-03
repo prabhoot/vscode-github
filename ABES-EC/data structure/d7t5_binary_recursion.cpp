@@ -1,33 +1,26 @@
 #include <iostream>
 using namespace std;
-int binary_search(int a[],int n,int low,int high,int search_key){
-    int mid{0};
-        if(low<=high){
-            mid=(low+high)/2;
-        }
-        else if(a[mid]==search_key){
-            return mid;
-        }
-        else if(search_key<a[mid]){
-            binary_search(a,n,low,mid-1,search_key);
-        }
-        else {
-            binary_search(a,n,mid+1,high,search_key);
-        }
-        cout<<"not found";
-    return 0;
+int binarySearch(int arr[], int l, int r, int x)
+{
+	if (r >= l) {
+		int mid = l + (r - l) / 2;
+		if (arr[mid] == x)
+			return mid;
+		if (arr[mid] > x)
+			return binarySearch(arr, l, mid - 1, x);
+		return binarySearch(arr, mid + 1, r, x);
+	}
+	return -1;
 }
-int main(){
-   int n{6};
-  //cin>>n;
-  int a[n]{1,3,5,6,7,8};
-// for(int i{};i<n;i++){
-//  cin>>a[i];
-// }
-int search_key{3};
-    int low{};
-    int high{n-1};
-  //  cin>>low>>high>>search_key;
-binary_search(a,n,low,high,search_key);
-    return 0;
+
+int main()
+{
+	int arr[] = { 2, 3, 4, 10, 29 };
+	int x = 29;
+	int n = sizeof(arr) / sizeof(arr[0]);
+	int result = binarySearch(arr, 0, n - 1, x);
+	(result == -1)
+		? cout << "Element is not present in array"
+		: cout << "Element is present at index " << result;
+	return 0;
 }

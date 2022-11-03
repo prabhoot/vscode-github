@@ -20,12 +20,10 @@ int partion(int a[], int low, int high) {
         
     }
   }
-
  while(i<j);
         int t=a[j];
         a[j]=a[low];
-        a[low]=t;
-    
+        a[low]=t;    
    return j;
 }
 void quick_sort(int a[], int low, int high) {
@@ -36,13 +34,12 @@ void quick_sort(int a[], int low, int high) {
     quick_sort(a, j + 1, high);
   }
 }
-
 int main() {
-  int a[10]{200, 260, 300, 400, 90, 100, 70, 350, 250};
+  int a[10]{200, 260, 300, 400, 90, 100, 29, 350, 250};
   a[9] = INT_MAX;
 for(int i{};i<9;i++){
     quick_sort(a, 0, 9);
-    cout<<a[i]<<endl;
+    cout<<a[i]<<" ";
 }
   return 0;
 }

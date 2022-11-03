@@ -1,32 +1,25 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int transpose(int a,int c){
-    re
+#define n 3
+void transpose_mat(int A[][n], int B[][n])
+{
+	int i, j;
+	for (i = 0; i < n; i++)
+		for (j = 0; j < n; j++){
+            B[i][j] = A[j][i];
+            cout << " " << B[i][j];}
+	cout <<endl;
 }
-int main(){
-    int r1,c1;
-    cout<<"enter indices:";
-    cin>>r1>>c1;
-    int a[10][10]{};
-    int c[10][10]{};
-cout<<"enter elements:";
-    for(int i=0;i<r1;i++){
-        for(int j=0;j<c1;j++){
-            cin>>a[i][j];
-        }
-    }
-
-    for(int i=0;i<r1;i++){
-        for(int j=0;j<c1;j++){
-            c[i][j]=a[j][i];
-        }
-    }
-
-    for(int i=0;i<r1;i++){
-        for(int j=0;j<c1;j++){
-            cout<<c[i][j];
-        }
-        cout<<endl;
-    }
-    return 0;
+int main()
+{
+	int A[n][n] = { { 1, 1, 1},{ 2, 2, 2},{ 3, 3, 3}};
+	int B[n][n],i{},j{};
+	transpose_mat(A, B);
+	cout << "Result matrix is "<<endl;
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++)
+			cout << " " << B[i][j];
+		cout <<endl;
+	}
+	return 0;
 }

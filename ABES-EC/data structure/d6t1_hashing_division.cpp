@@ -29,13 +29,15 @@ int main(){
     int table_size{};
     cout<<"enter table size";
     cin>>table_size;
+
     cout<<"no. of elements  ";
  cin>>n;
     int a[n];
  for(int i=0;i<n;i++){
        cin>>a[i];
  hf_division(a[i],table_size);
-       
+        
+ 
  }
     return 0;
 }

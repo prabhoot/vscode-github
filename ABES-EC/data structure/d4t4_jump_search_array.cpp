@@ -35,16 +35,11 @@ int jump_search(int a[], int n, int search_key, int low, int high, int jump) {
 
 int main() {
   int n{9};
-  // cin >> n;
-  int a[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
-  // for (int i{}; i < n; i++) {
-  //   cin >> a[i];
-  // }
+  int a[]{1, 2, 3, 4, 5, 6, 7, 8,29};
   int jump{2};
   int low{0};
   int high{8};
-  int search_key{10};
-  // cin >> low >> high >> search_key>>jump;
+  int search_key{29};
   jump_search(a, n, search_key, low, high, jump);
   return 0;
 }

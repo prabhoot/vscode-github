@@ -10,9 +10,11 @@ int power(int a, int n) {
 }
 int main() {
   int a{};
+  cout<<"enter base:"<<endl;
   cin >> a;
   int n{};
+  cout<<"enter power:"<<endl;
   cin >> n;
-  cout << power(a, n);
+  cout <<"The result of "<<a<<"^"<<n<<" is " << power(a, n)<<endl;
   return 0;
 }

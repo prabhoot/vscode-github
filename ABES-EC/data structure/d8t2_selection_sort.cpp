@@ -22,7 +22,7 @@ void selection_sort(int a[], int n) {
     }
 }}
 int main(){
-  int a[]{8, 45, 2, 68, 5, 1};
+  int a[]{8, 45, 2, 29, 5, 1};
    int n = sizeof(a)/sizeof(a[0]);
   selection_sort(a, n);
   print_array(a, n);
