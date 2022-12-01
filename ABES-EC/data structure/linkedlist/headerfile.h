@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 struct node{
@@ -16,12 +17,12 @@ void insbeg(struct node **start,int x){
     p->next=*start;
     *start=p;
 }
-int delbeg(struct node **start){
+void delbeg(struct node **start){
     struct node *p=*start;
-    *start=p->next;
-    int x=p->info;
-    free(p);
-    return x;
+    struct node *q=p->next;
+    struct node *r=(p->next)->next;
+    p->next=r;
+    free(q);
 }
 int del(struct node **start,int a){
     struct node *p=*start;
@@ -82,14 +83,15 @@ void insaft(struct node **start,int a,int x){
         temp=temp->next;
     }
 }
-void ordins(struct node **start,int x){
-    struct node *p=*start;
-    while(p->next!=NULL&&((p->next)->info<=x)){
-        p=p->next;
-    }
-            insaft(start,p->info,x);
-            return;
-}
+// void ordins(struct node **start,int x){
+//     struct node *p=*start;
+//     while(p->next!=NULL&&((p->next)->info<=x)){
+//         p=p->next;
+//     }
+//             insaft(start,p->info,x);
+//             return;
+// }
+
 void insend(struct node **start,int x){
     struct node *temp;
     temp=*start;
@@ -107,4 +109,34 @@ void insend(struct node **start,int x){
     p->next=NULL;
     temp->next=p;
     }
+}
+void oill(struct node **start,int x){
+    struct node *p=*start;
+    struct node *q=NULL;
+    while((p!=NULL)&&((p->info)<=x)){
+        q=p;
+        p=p->next;
+    }
+    if(q==NULL){
+        insbeg(start,x);
+    }
+    else if(p==NULL){
+        insend(start,x);
+    }
+    else{
+    insaft(start, q->info, x);}
+}
+void revll(struct node **start){
+    struct node *c=*start;
+    struct node *p=NULL;
+    struct node *n=c->next;
+    while(c!=NULL){
+        c->next=p;
+        p=c;
+        c=n;
+        if(n!=NULL){
+            n=n->next;
+        }
+    }
+    *start=p;
 }

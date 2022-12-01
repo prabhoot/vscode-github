@@ -94,7 +94,7 @@ int main(){
     struct node *l=NULL;
 
     ibeg(&l,"1");
-    ibeg(&l,"2");
+    ibeg(&l,"2");   
     ibeg(&l,"29");
     ibeg(&l,"69");
     ibeg(&l,"4");

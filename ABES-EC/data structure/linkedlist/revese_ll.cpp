@@ -1,11 +1,17 @@
 //reverse in linked list.
 #include "headerfile.h"
 void revll(struct node **start){
-    struct node *p=*start;
-    while(p->next!=NULL){
-        p=p->next;
+    struct node *c=*start;
+    struct node *p=NULL;
+    struct node *n=c->next;
+    while(c!=NULL){
+        c->next=p;
+        p=c;
+        c=n;
+        if(n!=NULL){
+            n=n->next;
+        }
     }
-    p->next=*start;
     *start=p;
 }
 int main(){
@@ -14,9 +20,10 @@ int main(){
     insend(&start,5);
     insend(&start,7);
     insend(&start,8);
-    insend(&start,39);
+    insend(&start,9);
     traverse(&start);
+    cout<<endl;
     revll(&start);
-    cout<<((start->next->info));
+    traverse(&start);
     return 0;
 }
