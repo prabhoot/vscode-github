@@ -32,10 +32,8 @@ int del(struct node **start,int a){
         exit(1);
     }
     if(p->next==NULL){
-        int x=delbeg(start);
-        cout<<"st";
-
-        return x;
+        delbeg(start);
+        // return x;
     }
     while(p->next!=NULL){
              if(p->next->info==a){
@@ -139,4 +137,50 @@ void revll(struct node **start){
         }
     }
     *start=p;
+}
+struct node *splitll(struct node **start){
+    struct node *t=*start;
+    struct node *r=(*start)->next;
+    while(r!=NULL&&r->next!=NULL){
+        t=t->next;
+        r=r->next->next;
+    }
+    struct node *start2=t->next;
+    t->next=NULL;
+    return start2;
+}
+int length_ll(struct node **start){
+    int count=0;
+    struct node *p=*start;
+    while (p!=NULL) {
+    p=p->next;
+    count++;
+    }
+    return count;
+}
+
+struct node *merge_point_ll(struct node **start1,struct node **start2){
+    struct node *p=*start1;
+    struct node *q=*start2;
+    int a=length_ll(start1);
+    int b=length_ll(start2);
+    int t=abs(a-b);
+    if(a>b){
+        while (t--) {
+        p=p->next;
+        }
+    }
+    else {
+    while (t--) {
+    q=q->next;
+    }
+    }
+    while (p!=NULL) {
+        if(p->info==q->info){
+            return p;
+        }
+    q=q->next;
+    p=p->next;
+    }
+    return NULL;
 }

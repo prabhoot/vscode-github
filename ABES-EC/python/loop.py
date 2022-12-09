@@ -1,4 +1,4 @@
-# counter=0
+    # counter=0
 # simple_list=[0,1,2,3,4,5]
 # for i in simple_list[1:4]:
 #     for j in simple_list[4:7]:

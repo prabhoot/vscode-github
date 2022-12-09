@@ -1,8 +1,8 @@
+#include <cstdlib>
 #include <iostream>
-#include <string>
 using namespace std;
 struct node{
-    string info;
+    int info;
     struct node *next ;
 };
 struct node *getnode(){
@@ -10,19 +10,21 @@ struct node *getnode(){
     p=(struct node *)malloc(sizeof(struct node));
     return p;
 }
-void ibeg(struct node **start,string x){
+void insbeg(struct node **start,int x){
     struct node *p;
     p=getnode();
     p->info=x;
     p->next=*start;
     *start=p;
 }
-void dbeg(struct node **start){
+void delbeg(struct node **start){
     struct node *p=*start;
-    *start=p->next;
-    free(p);
+    struct node *q=p->next;
+    struct node *r=(p->next)->next;
+    p->next=r;
+    free(q);
 }
-void d(struct node **start,string a){
+int del(struct node **start,int a){
     struct node *p=*start;
     struct node *temp;
     if(p==NULL){
@@ -30,38 +32,53 @@ void d(struct node **start,string a){
         exit(1);
     }
     if(p->next==NULL){
-        dbeg(start);
+        delbeg(start);
+        // return x;
     }
     while(p->next!=NULL){
              if(p->next->info==a){
-                // string x=p->next->info;
+                int x=p->next->info;
                 p->next=(p->next)->next;
                 free(p->next);
-             
+             return x;
+             }
         p=p->next;
-    }}
+    }
+    return 0;
 }
-string dend(struct node **start){
+int delend(struct node **start){
     struct node *p;
     p=*start;
     while((p->next)->next!=NULL){
         p=p->next;
     }
-    string x=p->info;
+    int x=p->info;
     p->next=NULL;
-    free(p->next);
     return x;
+    free(p->next);
 }
-void traverse(struct node **start){
-    struct node *p;
-    p=*start;
-    while(p!=NULL){
-    cout<<p->info<<" ";
-    p=p->next;
-    }
+// void traverse(struct node **start){
+//     struct node *p;
+//     p=*start;
+//     while(p!=NULL){
+//     cout<<p->info<<" ";
+//     p=p->next;
+//     }
     
+// }
+void travese(struct node *start){
+    if ((start)!=NULL) {
+    cout<<(start)->info<<" ";
+    travese(((start)->next));
+    }
 }
-void iaft(struct node **start,string a,string x){
+void rev_travese(struct node *start){
+     if ((start)!=NULL) {
+    travese(((start)->next));
+    cout<<(start)->info<<" ";
+    }
+}
+void insaft(struct node **start,int a,int x){
     struct node *temp;
     temp=*start;
     while(temp!=NULL){
@@ -76,11 +93,20 @@ void iaft(struct node **start,string a,string x){
         temp=temp->next;
     }
 }
-void iend(struct node **start,string x){
+// void ordins(struct node **start,int x){
+//     struct node *p=*start;
+//     while(p->next!=NULL&&((p->next)->info<=x)){
+//         p=p->next;
+//     }
+//             insaft(start,p->info,x);
+//             return;
+// }
+
+void insend(struct node **start,int x){
     struct node *temp;
     temp=*start;
     if(temp==NULL){
-        ibeg(start,x);
+        insbeg(start,x);
         return;
     }
     else{
@@ -93,4 +119,80 @@ void iend(struct node **start,string x){
     p->next=NULL;
     temp->next=p;
     }
+}
+void oill(struct node **start,int x){
+    struct node *p=*start;
+    struct node *q=NULL;
+    while((p!=NULL)&&((p->info)<=x)){
+        q=p;
+        p=p->next;
+    }
+    if(q==NULL){
+        insbeg(start,x);
+    }
+    else if(p==NULL){
+        insend(start,x);
+    }
+    else{
+    insaft(start, q->info, x);}
+}
+void revll(struct node **start){
+    struct node *c=*start;
+    struct node *p=NULL;
+    struct node *n=c->next;
+    while(c!=NULL){
+        c->next=p;
+        p=c;
+        c=n;
+        if(n!=NULL){
+            n=n->next;
+        }
+    }
+    *start=p;
+}
+struct node *splitll(struct node **start){
+    struct node *t=*start;
+    struct node *r=(*start)->next;
+    while(r!=NULL&&r->next!=NULL){
+        t=t->next;
+        r=r->next->next;
+    }
+    struct node *start2=t->next;
+    t->next=NULL;
+    return start2;
+}
+int length_ll(struct node **start){
+    int count=0;
+    struct node *p=*start;
+    while (p!=NULL) {
+    p=p->next;
+    count++;
+    }
+    return count;
+}
+
+struct node *merge_point_ll(struct node **start1,struct node **start2){
+    struct node *p=*start1;
+    struct node *q=*start2;
+    int a=length_ll(start1);
+    int b=length_ll(start2);
+    int t=abs(a-b);
+    if(a>b){
+        while (t--) {
+        p=p->next;
+        }
+    }
+    else {
+    while (t--) {
+    q=q->next;
+    }
+    }
+    while (p!=NULL) {
+        if(p->info==q->info){
+            return p;
+        }
+    q=q->next;
+    p=p->next;
+    }
+    return NULL;
 }

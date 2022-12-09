@@ -13,13 +13,12 @@ int nodecount(struct node **start){
 }
 int main(){
     struct node *l=NULL;
-    ibeg(&l,"3");
-    ibeg(&l,"3");
-    ibeg(&l,"3");
-    ibeg(&l,"3");
-    ibeg(&l,"3");
-    ibeg(&l,"3");  
-    dbeg(&l);
+    insbeg(&l,3);
+    insbeg(&l,3);
+    insbeg(&l,3);
+    insbeg(&l,3);
+    insbeg(&l,3);
+    del(&l, 3);
     cout<<nodecount(&l);
     return 0;
 }
