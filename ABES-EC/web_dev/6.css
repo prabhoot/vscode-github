@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    margin: 10px;
+}
+h2{
+    display: inline;
+}
+
+.remove{
+    color: red;
+    float : right;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.banner1{
+    margin: 20px;
+    position:absolute;
+    display: flex;
+}
+.banner1 div{
+    padding: 60px;
+}
+.banner2{
+    margin: 20px;
+    margin-top: 400px;
+    position: absolute;
+    display: flex;
+}
+.banner2 div{
+    padding: 60px;
+}

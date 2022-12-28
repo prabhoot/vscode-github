@@ -14,7 +14,7 @@ void isert_at_index(struct node **start,int position,int maxsize,string x){
     struct node *p=*start;
     struct node *q=NULL;
    if(position==1){
-        ibeg(start,x);
+        insbeg(start,x);
         return;
    }
    else if(position==maxsize+1){

@@ -11,9 +11,6 @@ int nodecount(struct node **start){
         p=p->next;
     }
 
-
-
-
 while(p!=NULL&&key>=p->info){
     q=p;
     p=p->next;
