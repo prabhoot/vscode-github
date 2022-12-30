@@ -13,7 +13,7 @@ int main() {
   // cin>>x;
   // root=makenode(x);
   // create_tree(&root);
-  cout << "preord_traversal: ";
+  cout << "preord_traversal: ";  
   preord_traversal(root);
   cout << endl;
   cout << "postord_traversal: ";

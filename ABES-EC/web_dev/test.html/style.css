@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav1 nav {
+    display: flex;
+
+}
+
+
+
+.list1 {
+    display: flex;
+    /* padding-left: 100px; */
+    /* float: right; */
+}
+
+.lo {
+    padding-left: 100px;
+    padding-right: 50px;
+}
+
+ul li {
+    padding: 10px;
+}
+
+.nav1 nav ul li {
+    list-style: none;
+}
+
+
+
+.image {
+    width: 20px;
+    height: auto;
+    padding-left: 20px;
+    /* pa */
+    padding-right: 400px;
+}
+
+.abes {
+    margin-left: 30%;
+    font-size: large;
+}
+
+.nav2 {
+    background-color: black;
+}
+
+.nav2 nav {
+    display: flex;
+}
+
+.list2 {
+    display: flex;
+}
+
+.nav2 nav .list2 li {
+    list-style: none;
+    color: white;
+}
+
+.nav2 nav .btn1 {
+    float: right;
+    margin-left: 55%;
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+}
+
+.nav2 nav .btn1 button {
+    padding: 5px 5px;
+    background-color: green;
+}

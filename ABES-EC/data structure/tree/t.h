@@ -29,7 +29,7 @@ inline struct node *makenode(int x) { //(int x)
   p = (struct node *)malloc(sizeof(struct node));
   p->data = x;
   p->left = NULL;
-  p->right = NULL;
+  p->right = NULL;7
   return p;
 }
 
