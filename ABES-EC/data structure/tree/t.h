@@ -23,13 +23,12 @@ struct node *rear, *front;
 int ht[size][size] = {{0}};
 int n = sizeof(ht) / sizeof(ht[0]);
 
-
 inline struct node *makenode(int x) { //(int x)
   struct node *p;
   p = (struct node *)malloc(sizeof(struct node));
   p->data = x;
   p->left = NULL;
-  p->right = NULL;7
+  p->right = NULL;
   return p;
 }
 
@@ -161,7 +160,7 @@ inline bool isempty() {
   }
 }
 
-  inline void level_order_traversal(struct node *root) {
+inline void level_order_traversal(struct node *root) {
   initiate_queue();
   enqueue(root);
   struct node *p = NULL;
@@ -174,9 +173,9 @@ inline bool isempty() {
     if (p->right != NULL) {
       enqueue(p->right);
     }
-}}
+  }
+}
 // *************for a queue********************
-
 
 // *************for a hash table***************
 
@@ -188,17 +187,17 @@ inline void insert_in_ht_lr(struct node *root) {
   ht[root->level][j] = root->data;
 }
 
-void initiate_ht(){
-countl = 0;
-countr = 0;
+inline void initiate_ht() {
+  countl = 0;
+  countr = 0;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
-    ht[i][j]=0;
+      ht[i][j] = 0;
     }
-}
+  }
 }
 
-void display_ht() {
+inline void display_ht() {
   bool flag = 0;
   for (int i = 0; i < n; i++) {
     flag = 0;
@@ -215,7 +214,7 @@ void display_ht() {
   }
 }
 
-void display_all_ht() {
+inline void display_all_ht() {
   bool flag = 0;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
@@ -250,14 +249,13 @@ inline void create_hash_table_lr(struct node *root) {
   }
 }
 
-
 inline void insert_in_ht_vtb(struct node *root) {
-  int h=height_tree(root);
+  int h = height_tree(root);
   int j = 0;
-  while (ht[root->level+h][j] != 0) {
+  while (ht[root->level + h][j] != 0) {
     j++;
   }
-  ht[root->level+h][j] = root->data;
+  ht[root->level + h][j] = root->data;
 }
 
 inline void create_hash_table_vtb(struct node *root) {
@@ -287,6 +285,26 @@ inline void create_hash_table_vtb(struct node *root) {
 // *************for a hash table***************
 
 // *******************traversals***************************
+
+inline struct node *clone_binary_tree(struct node *root) {
+  if (root == NULL) {
+    return NULL;
+  }
+  struct node *croot = makenode(root->data);
+  croot->left = clone_binary_tree(root->left);
+  croot->right = clone_binary_tree(root->right);
+  return croot;
+}
+
+inline void delete_entire_tree(struct node **root) {
+  if ((*root) == NULL) {
+    return;
+  }
+  delete_entire_tree(&(*root)->left);
+  delete_entire_tree(&(*root)->right);
+  cout << (*root)->data << " ";
+  free((*root));
+}
 
 inline void preord_traversal(struct node *root) {
   if (root != NULL) {
@@ -318,18 +336,18 @@ inline void left_view_traversal(struct node *root) {
     i++;
   }
 }
-inline void right_view_traversal(struct node*root){
+inline void right_view_traversal(struct node *root) {
   create_hash_table_lr(root);
-  for(int i=0;i<n;i++){
-    for(int j=n-1;j>=0;j--){
-      if (ht[i][j]!=0) {
-      cout<<ht[i][j]<<" ";
-      break;
+  for (int i = 0; i < n; i++) {
+    for (int j = n - 1; j >= 0; j--) {
+      if (ht[i][j] != 0) {
+        cout << ht[i][j] << " ";
+        break;
       }
     }
-  }  
+  }
 }
-void level_order_traversal_ht(struct node *root){
+inline void level_order_traversal_ht(struct node *root) {
   create_hash_table_lr(root);
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
@@ -339,13 +357,13 @@ void level_order_traversal_ht(struct node *root){
     }
   }
 }
-void verticle_traversal(struct node *root){
+inline void verticle_traversal(struct node *root) {
   create_hash_table_lr(root);
   display_all_ht();
 }
 // ******************* traversals ***************************
 // ***********************BST********************************
-int bst_search(struct node *t, int key) {
+inline int bst_search(struct node *t, int key) {
   while (t != NULL) {
     if (t->data == key) {
       return 1;
@@ -357,62 +375,60 @@ int bst_search(struct node *t, int key) {
       }
     }
   }
-  if (t==NULL) {
-  return -1;
+  if (t == NULL) {
+    return -1;
   }
   return 0;
 }
 
-struct node * minimum(struct node *t) {
+inline struct node *minimum(struct node *t) {
   while (t->left != NULL) {
     t = t->left;
   }
   return t;
 }
-struct node * maximum(struct node *t) {
+inline struct node *maximum(struct node *t) {
   while (t->right != NULL) {
     t = t->right;
   }
   return t;
 }
 
-struct node * bst_successor(struct node **root){
-  struct node *p=*root;
-  struct node *q=NULL;
-  if (p->right!=NULL) {
-  q=minimum(p->right);
-  return q;
-  }
-  else {
-    q=p->father;
-    while ((q!=NULL)&&(q->right==p)) {
-    p=q;
-    q=q->father;
+inline struct node *bst_successor(struct node **root) {
+  struct node *p = *root;
+  struct node *q = NULL;
+  if (p->right != NULL) {
+    q = minimum(p->right);
+    return q;
+  } else {
+    q = p->father;
+    while ((q != NULL) && (q->right == p)) {
+      p = q;
+      q = q->father;
     }
   }
   return q;
 }
 
-struct node * bst_predccessor(struct node **root){
-  struct node *p=*root;
-  struct node *q=NULL;
-  if (p->left!=NULL) {
-  q=maximum(p->left);
-  return q;
-  }
-  else {
-    q=p->father;
-    while ((q!=NULL)&&(q->left==p)) {
-    p=q;
-    q=q->father;
+inline struct node *bst_predccessor(struct node **root) {
+  struct node *p = *root;
+  struct node *q = NULL;
+  if (p->left != NULL) {
+    q = maximum(p->left);
+    return q;
+  } else {
+    q = p->father;
+    while ((q != NULL) && (q->left == p)) {
+      p = q;
+      q = q->father;
     }
   }
   return q;
 }
-void bst_insert(struct node **root, int x) {
+inline void bst_insert(struct node **root, int x) {
   if (*root == NULL) {
     *root = makenode(x);
-    (*root)->father=NULL;
+    (*root)->father = NULL;
     return;
   }
   struct node *p = *root;
@@ -428,17 +444,16 @@ void bst_insert(struct node **root, int x) {
   }
   if (x < q->data) {
     q->left = makenode(x);
-      q->left->father=q;
+    q->left->father = q;
 
   } else {
     q->right = makenode(x);
-      q->right->father=q;
-
+    q->right->father = q;
   }
 }
-int distance_between_min_and_max(struct node * root){
-  struct node *t=root;
-  count1=0;
+inline int distance_between_min_and_max(struct node *root) {
+  struct node *t = root;
+  count1 = 0;
   // function for minimum
   while (t->left != NULL) {
     t = t->left;
@@ -451,23 +466,19 @@ int distance_between_min_and_max(struct node * root){
   return count1;
 }
 
-
-
 // ***********************BST********************************
 
-
 // ********************rotation******************************
-struct node * ll(struct node **root){
-  struct node *x=*root;
-  struct node *y=x->left;
-  struct node *z=y->left;
-  x->right=y->left;
-  y->left=x;
-  *root=y;
+struct node *ll(struct node **root) {
+  struct node *x = *root;
+  struct node *y = x->left;
+  struct node *z = y->left;
+  x->right = y->left;
+  y->left = x;
+  *root = y;
   return y;
 }
 // ********************rotation******************************
-
 
 // ***********************AVL********************************
 
