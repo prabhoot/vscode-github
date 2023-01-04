@@ -1,36 +1,28 @@
 #include "t.h"
 #include <cstddef>
-bool to_cheak_trees_identical(struct node *root1,struct node *root2){
-    if (root1==NULL||root2==NULL) {
-    return 1;
-    }
-    if (root1->data==root2->data) {
-    to_cheak_trees_identical(root1->left,root2->left);
-    to_cheak_trees_identical(root1->right,root2->right);
-    return true;
-    }
-    return false;
-}
-int main() {
-  struct node *root = NULL;
-  root = makenode(1);
-  root->left = makenode(2);
-  root->right = makenode(3);
-  root->left->left = makenode(4);
-  root->left->right = makenode(5);
-  root->right->left = makenode(6);
-  root->right->right = makenode(7);
-  preord_traversal(root);
-  cout<<endl;
-  struct node *root2 = NULL;
-  root = makenode(1);
-  root->left = makenode(2);
-  root->right = makenode(3);
-  root->left->left = makenode(4);
-  root->left->right = makenode(5);
-  root->right->left = makenode(6);
-  root->right->right = makenode(7);
-                        preord_traversal(root);
 
-                        return 0;
-                        }
+int main() {
+  struct node *root1 = NULL;
+  root1 = makenode(1);
+  root1->left = makenode(2);
+  root1->right = makenode(3);
+  root1->left->left = makenode(4);
+  root1->left->right = makenode(5);
+  root1->right->left = makenode(6);
+  root1->right->right = makenode(7);
+  preord_traversal(root1);
+  cout << endl;
+  struct node *root2 = NULL;
+  root2 = makenode(1);
+  root2->left = makenode(2);
+  root2->right = makenode(3);
+  root2->left->left = makenode(4);
+  root2->left->right = makenode(5);
+  root2->right->left = makenode(6);
+  root2->right->right = makenode(7);
+  preord_traversal(root2);
+  cout<<endl;
+  cout<<"1 for identical 0 for not identical:\n";
+  cout<<to_cheak_trees_identical(root1, root2);
+  return 0;
+}

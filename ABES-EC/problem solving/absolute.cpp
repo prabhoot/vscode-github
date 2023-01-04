@@ -15,7 +15,6 @@ for (int j{}; j < n; j++) {
 cout<<a[i][j]<<" ";
   }
   cout<<endl;
-}
-  
+} 
     return 0;
 }

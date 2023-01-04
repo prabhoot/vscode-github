@@ -1,15 +1,5 @@
 #include "t.h"
-#include <cstddef>
-#include <cstdlib>
-#include <type_traits>
 
-bool isempty(struct node *t) {
-  if (t == NULL) {
-    return true;
-  } else {
-    return false;
-  }
-}
 int main() {
   struct node *root = NULL;
   root = makenode(1);
@@ -19,9 +9,10 @@ int main() {
   root->left->right = makenode(5);
   root->right->left = makenode(6);
   root->right->right = makenode(7);
-  delete_entire_tree(&root);
+  preord_traversal(root);
   cout<<endl;
-  cout<<root->data;
-  cout<<endl;
-  return 0;
+  struct node *new_root=mirror_tree(root);
+  cout<<"the new mirror tree is ";
+  preord_traversal(new_root);
+   return 0;
 }

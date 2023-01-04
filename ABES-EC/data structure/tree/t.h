@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ios>
 #include <iostream>
+#include <vector> 
 #include <ostream>
 #define size 10
 using namespace std;
@@ -12,6 +13,8 @@ struct node {
   struct node *right;
   struct node *father;
   int data;
+  char value;
+  struct node *prev;
   struct node *next;
   int level;
   int height;
@@ -19,11 +22,13 @@ struct node {
 int countl = 0;
 int countr = 0;
 int count1 = 0;
+struct node *s1 = NULL;
+struct node *s2 = NULL;
 struct node *rear, *front;
 int ht[size][size] = {{0}};
 int n = sizeof(ht) / sizeof(ht[0]);
-
-inline struct node *makenode(int x) { //(int x)
+// use makenode for int type data input with data
+inline struct node *makenode(int x) {
   struct node *p;
   p = (struct node *)malloc(sizeof(struct node));
   p->data = x;
@@ -31,7 +36,13 @@ inline struct node *makenode(int x) { //(int x)
   p->right = NULL;
   return p;
 }
-
+// use getnode for the char type input type.with value
+inline struct node *getnode(char x) {
+  struct node *p = NULL;
+  p = (struct node *)malloc(sizeof(struct node));
+  p->value = x;
+  return p;
+}
 // **************basic initialisation**********************
 
 // ******************* count ***************************
@@ -88,14 +99,26 @@ inline int count_n1node(struct node *root) {
   }
 }
 
-inline int height_tree(struct node *root) {
+inline int height_tree_0(struct node *root) {
   if (root == NULL) {
     return 0;
   } else {
     if (root->left == NULL && root->right == NULL) {
       return 0;
     } else {
-      return max(height_tree(root->left), height_tree(root->right)) + 1;
+      return max(height_tree_0(root->left), height_tree_0(root->right)) + 1;
+    }
+  }
+}
+
+inline int height_tree_1(struct node *root) {
+  if (root == NULL) {
+    return 0;
+  } else {
+    if (root->left == NULL && root->right == NULL) {
+      return 1;
+    } else {
+      return max(height_tree_1(root->left), height_tree_1(root->right)) + 1;
     }
   }
 }
@@ -105,6 +128,65 @@ inline int sum_of_nodes(struct node *root) {
     return 0;
   }
   return sum_of_nodes(root->left) + sum_of_nodes(root->right) + root->data;
+}
+inline int distance_between_min_and_max(struct node *root) {
+  struct node *t = root;
+  count1 = 0;
+  // function for minimum
+  while (t->left != NULL) {
+    t = t->left;
+    count1++;
+  }
+  while (t->right != NULL) {
+    t = t->right;
+    count1++;
+  }
+  return count1;
+}
+inline int diameter_tree(struct node *root) {
+  if (root == NULL) {
+    return 0;
+  } else {
+    int d1 = height_tree_1(root->left) + height_tree_1(root->right) + 1;
+    int d2 = diameter_tree(root->left);
+    int d3 = diameter_tree(root->right);
+    int max_diameter = max(d1, max(d2, d3));
+    return max_diameter;
+  }
+}
+inline int maximum_path_sum(struct node *t) {
+  if (t == NULL) {
+    return 0;
+  } else {
+    if ((t->left == NULL) && (t->right == NULL)) {
+      return t->data;
+    } else {
+      int l = maximum_path_sum(t->left);
+      int r = maximum_path_sum(t->right);
+      int m = max(l, r);
+      return t->data + m;
+    }
+  }
+  return 0;
+}
+inline struct node *lca(struct node *t, int x, int y) {
+  if (t == NULL) {
+    return NULL;
+  } else {
+    if (t->data == x || t->data == y) {
+      return t;
+    } else {
+      struct node *l = lca(t->left, x, y);
+      struct node *r = lca(t->right, x, y);
+      if (l == NULL) {
+        return r;
+      } else if (r == NULL) {
+        return l;
+      } else {
+        return t;
+      }
+    }
+  }
 }
 // ******************* count ***************************
 // ******************* validation***********************
@@ -118,13 +200,55 @@ inline bool strictly(struct node *root) {
 }
 
 inline int complete(struct node *root) {
-  if (2 * (height_tree(root)) == count_leaf(root)) {
+  if (2 * (height_tree_0(root)) == count_leaf(root)) {
     return 1;
   } else {
     return 0;
   }
 }
+inline bool to_cheak_trees_identical(struct node *root1, struct node *root2) {
+  if (node_count(root1) != node_count(root2)) {
+    return false;
+  }
+  if (root1 == NULL || root2 == NULL) {
+    return 0;
+  }
+  if (root1->data == root2->data) {
+    to_cheak_trees_identical(root1->left, root2->left);
+    to_cheak_trees_identical(root1->right, root2->right);
+  } else {
+    cout << "the trees are not equal\n";
+    exit(1);
+  }
+  return true;
+}
 // ******************* validation***********************
+
+inline void create_tree(struct node **root) {
+  bool choice;
+  int x;
+  struct node *p = NULL;
+  cout << "whether the left of " << (*root)->data << " exists or not (1/0)"
+       << endl;
+  cin >> choice;
+  if (choice == 1) {
+    cout << "input data of the left " << endl;
+    cin >> x;
+    p = makenode(x);
+    (*root)->left = p;
+    create_tree(&p);
+  }
+  cout << "whether the right of " << (*root)->data << " exists or not (1/0)"
+       << endl;
+  cin >> choice;
+  if (choice == 1) {
+    cout << "input data of the right " << endl;
+    cin >> x;
+    p = makenode(x);
+    (*root)->right = p;
+    create_tree(&p);
+  }
+}
 
 // *************for a queue*****************************
 
@@ -250,7 +374,7 @@ inline void create_hash_table_lr(struct node *root) {
 }
 
 inline void insert_in_ht_vtb(struct node *root) {
-  int h = height_tree(root);
+  int h = height_tree_0(root);
   int j = 0;
   while (ht[root->level + h][j] != 0) {
     j++;
@@ -284,6 +408,64 @@ inline void create_hash_table_vtb(struct node *root) {
 }
 // *************for a hash table***************
 
+// *******************************stack*******************************
+// input output in the form of nodes.
+inline void initiate_stack() {
+  s1 = NULL;
+  s2 = NULL;
+}
+inline void push(struct node **start, struct node **root) {
+
+  if (*start == NULL) {
+    *start = *root;
+    (*start)->next = NULL;
+    (*start)->prev = NULL;
+    return;
+  }
+
+  while ((*start)->next != NULL) {
+    (*start) = (*start)->next;
+  }
+  (*start)->next = (*root);
+  (*root)->prev = (*start);
+  (*root)->next = NULL;
+  (*start) = (*root);
+}
+inline struct node *pop(struct node **start, struct node **root) {
+  if ((*start) == NULL) {
+    cout << "\ncan't delete empty stack    \n!!!!!!!!!!!!!compilation "
+            "terminted!!!!!!!!!!!!!!\n";
+    exit(1);
+  }
+  if ((*start)->prev == NULL) {
+    struct node *x = (*start);
+    (*start) = NULL;
+    return x;
+  } else {
+    (*start) = (*start)->prev;
+    struct node *x = (*start)->next;
+    (*start)->next = NULL;
+    return x;
+  }
+}
+// *******************************stack*******************************
+
+inline bool prcd(char a, char b) {
+  if (a == '^' || a == '*' || a == '/' || a == '%') {
+    if (b == '^') {
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    if (b == '+' || b == '-') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
 // *******************traversals***************************
 
 inline struct node *clone_binary_tree(struct node *root) {
@@ -295,7 +477,15 @@ inline struct node *clone_binary_tree(struct node *root) {
   croot->right = clone_binary_tree(root->right);
   return croot;
 }
-
+inline struct node *mirror_tree(struct node *root) {
+  if (root == NULL) {
+    return NULL;
+  }
+  struct node *nroot = makenode(root->data);
+  nroot->left = mirror_tree(root->right);
+  nroot->right = mirror_tree(root->left);
+  return nroot;
+}
 inline void delete_entire_tree(struct node **root) {
   if ((*root) == NULL) {
     return;
@@ -451,25 +641,11 @@ inline void bst_insert(struct node **root, int x) {
     q->right->father = q;
   }
 }
-inline int distance_between_min_and_max(struct node *root) {
-  struct node *t = root;
-  count1 = 0;
-  // function for minimum
-  while (t->left != NULL) {
-    t = t->left;
-    count1++;
-  }
-  while (t->right != NULL) {
-    t = t->right;
-    count1++;
-  }
-  return count1;
-}
 
 // ***********************BST********************************
 
 // ********************rotation******************************
-struct node *ll(struct node **root) {
+inline struct node *ll(struct node **root) {
   struct node *x = *root;
   struct node *y = x->left;
   struct node *z = y->left;

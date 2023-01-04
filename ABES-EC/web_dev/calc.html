@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    #clr {
+        margin-right: 56px;
+    }
+</style>
+
+<body bgcolor="pink">
+    <div class="container">
+        <center>
+            <p>prabhoot's calculator</p>
+            <form action="new">
+                <input type="text" name="show"><br>
+                <input name="9" type="button" onclick="show.value+='9'" value="9">
+                <input name="8" type="button" onclick="show.value+='8'" value="8">
+                <input name="7" type="button" onclick="show.value+='7'" value="7">
+                <input name="+" type="button" onclick="show.value+='+'" value="+"><br>
+                <input name="6" type="button" onclick="show.value+='6'" value="6">
+                <input name="5" type="button" onclick="show.value+='5'" value="5">
+                <input name="4" type="button" onclick="show.value+='4'" value="4">
+                <input name="-" type="button" onclick="show.value+='-'" value="-"><br>
+                <input name="3" type="button" onclick="show.value+='3'" value="3">
+                <input name="2" type="button" onclick="show.value+='2'" value="2">
+                <input name="1" type="button" onclick="show.value+='1'" value="1">
+                <input name="*" type="button" onclick="show.value+='*'" value="*"><br>
+                <input name="0" type="button" onclick="show.value+='0'" value="0">
+                <input name="/" type="button" onclick="show.value+='/'" value="/">
+                <input name="." type="button" onclick="show.value+='.'" value=".">
+                <input name="=" type="button" onclick="show.value=eval(show.value)" value="="><br>
+                <div id="clr"> <input name="clr" type="button" onclick="show.value=' '" value="clr">
+                </div>
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>
