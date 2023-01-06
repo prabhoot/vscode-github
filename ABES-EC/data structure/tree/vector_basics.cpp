@@ -1,49 +1,50 @@
-// #include <functional>
-// #include <iostream>
-// #include <iterator>
-// #include <vector>
-// #include <numeric>
-// using namespace std;
-// void display_vector(vector<int>v){
-//   for(int i=0;i<v.size();i++){
-//     cout<<v[i]<<" ";
-//   }
-// }
-// void err(vector<int>&v){
-//   int n=v.size();
-//   for(int i=0;i<n;i++){
-//     v[i]+=1;
-//   }
+// vector basics
+//  #include <functional>
+//  #include <iostream>
+//  #include <iterator>
+//  #include <vector>
+//  #include <numeric>
+//  using namespace std;
+//  void display_vector(vector<int>v){
+//    for(int i=0;i<v.size();i++){
+//      cout<<v[i]<<" ";
+//    }
+//  }
+//  void err(vector<int>&v){
+//    int n=v.size();
+//    for(int i=0;i<n;i++){
+//      v[i]+=1;
+//    }
+//    cout<<endl;
+//    display_vector(v);
+//  }
+//  void cumm_sum(vector<int>v,int x){
+//    if(v.empty()==1){
+//      v.push_back(x);
+//    }
+//    else {
+//    v.push_back(v.back()+x);
+//    }
+//  }
+//  int main() {
+//    vector<int> v={1,2,3};
+//  vector<int >sum;
+//  //   cout<<"enter the size:";
+//  //  int size;
+//  //  cin>>size;
+//  //  for(int i=0;i<size;i++){
+//  //   cout<<"enter the elements";
+//  //   int x;
+//  //   cin>>x;
+//  //   v.push_back(x);
+//  //  }
+//   display_vector(v);
+//   err(v);
+//   cout<<endl;
+//   cout<<v.back();
 //   cout<<endl;
 //   display_vector(v);
-// }
-// void cumm_sum(vector<int>v,int x){
-//   if(v.empty()==1){
-//     v.push_back(x);
-//   }
-//   else {
-//   v.push_back(v.back()+x);
-//   }
-// }
-// int main() {
-//   vector<int> v={1,2,3};
-// vector<int >sum;
-// //   cout<<"enter the size:";
-// //  int size;
-// //  cin>>size;
-// //  for(int i=0;i<size;i++){
-// //   cout<<"enter the elements";
-// //   int x;
-// //   cin>>x;
-// //   v.push_back(x);
-// //  }
-//  display_vector(v);
-//  err(v);
-//  cout<<endl;
-//  cout<<v.back();
-//  cout<<endl;
-//  display_vector(v);
-//  cout<<endl;
+//   cout<<endl;
 
 // v.pop_back();
 //  display_vector(v);
@@ -55,11 +56,11 @@
 //   cout<<accumulate(v.begin(),v.end(),0);
 //   return 0;
 // }
-
 #include <iostream>
 #include <vector>
 using namespace std;
 int main() {
+
   // vector<int> v(5);
   // cout << "capacity " << v.capacity() << endl;
   // cout << "size " << v.size() << endl;
@@ -85,13 +86,18 @@ int main() {
   v[4].push_back(-3);
   v[4].push_back(-4);
   v[4].push_back(-5);
-
-  for(int i=0;i<5;i++){
-    cout<<i<<": ";
-    for(int j=0;j<v[i].size();j++){
-      cout<<v[i][j]<<" ";
+  for (int i = 0; i < 5; i++) {
+    cout <<i << ": ";
+    for (int j = 0; j < v[i].size(); j++) {
+      cout << v[i][j] << " ";
     }
-    cout<<endl;
+    cout << endl;
   }
+cout<<endl;
+for(auto i:v){
+  for(auto j:i){
+    cout<<j<<" ";  }
+    cout<<endl;
+}
   return 0;
 }
