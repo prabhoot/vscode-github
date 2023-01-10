@@ -4,6 +4,7 @@
 #include <ios>
 #include <iostream>
 #include <vector> 
+#include <stack>
 #include <ostream>
 #define size 10
 using namespace std;
@@ -431,7 +432,7 @@ inline void push(struct node **start, struct node **root) {
   (*root)->next = NULL;
   (*start) = (*root);
 }
-inline struct node *pop(struct node **start, struct node **root) {
+inline struct node *pop(struct node **start) {
   if ((*start) == NULL) {
     cout << "\ncan't delete empty stack    \n!!!!!!!!!!!!!compilation "
             "terminted!!!!!!!!!!!!!!\n";
