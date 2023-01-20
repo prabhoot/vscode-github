@@ -1,4 +1,7 @@
 // 6. Write a program to add two time in hour, minute and second using structure. The values of the time is to be taken from the user.
+// input:-
+// 1 15 15
+// 2 45 30
 #include <iostream>
 using namespace std;
 #define n 2
@@ -22,6 +25,6 @@ t[2].minute=t[2].minute%60;
 t[2].hour=t[2].minute/60;
 
 t[2].hour=t[0].hour+t[1].hour;
-cout<<t[2].hour<<" hours : "<<t[2].minute<<" minutes : "<<t[2].second<<" seconds";
+cout<<t[2].hour<<" hours : "<<t[2].minute<<" minutes : "<<t[2].second<<" seconds\n";
     return 0;
 }

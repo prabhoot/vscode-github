@@ -1,6 +1,9 @@
 // 9. Write a structure to store the roll no., name, age (een 11 to 14) and address of students (more than 10). Store the information of the students. - Write a function to print the names of all the students having age 14.
+// input:-
+// 1 prabhoot 14 varanasi
+// 2 ram 19 Delhi
 #include <iostream>
-#define no_of_students 1
+#define no_of_students 2
 using namespace std;
  struct student {
         int rollno;
@@ -17,13 +20,13 @@ int main(){
     struct student s[no_of_students];
     for(int i=0;i<no_of_students;i++){
         cin>>s[i].rollno>>s[i].name;
-        cout<<"enter age only between 11 and 14"<<endl;
         cin>>s[i].age;
         cin.ignore();
         getline(cin,s[i].address);
     }
+    cout<<"the students with age 14 are:\n";
     for(int i=0;i<no_of_students;i++){
-        display(s[i]);}
+       if(s[i].age==14){ display(s[i]);}}
     
     return 0;
 }
