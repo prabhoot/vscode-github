@@ -18,7 +18,7 @@ int isempty(){
         return 0;
     }
 }
-int Stacktop(){
+int stacktop(){
     return s.item[s.top];
 }
 void push(int x){

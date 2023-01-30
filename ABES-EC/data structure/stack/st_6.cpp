@@ -1,37 +1,34 @@
-// Program to check the validity of Parenthesized Arithmetic Expression using Stack
-#include <iostream>
-#include <string>
-#include "stackfunction.cpp"
-using namespace std;
-bool check_parenthesis(string str){
-     initial();
-     struct stack s;
-    int i{};
-    while(str[i]=='\0'){
-        char x=str[i];
-        if(x=='('){
-            push(x);
-            
-        }
-        else{
-            pop();
-        }
-    }
-    if(isempty()){
-        return true;
-    }
-    else{
-        return false;
+// Program to check the validity of Parenthesized Arithmetic Expression using
+// Stack.
+// input:-
+// (2 + 5) 6
+#include "stack.h"
+void check_parenthesis(string str) {
+  initial();
+  struct stack s;
+  int i{};
+  int count = 0;
+  while (str[i] == '\0') {
+    char x = str[i];
+    if (x == '(') {
+      push(x);
+      count++;
+    } else if (str[i] == ')') {
+      pop();
+      count--;
     }
     i++;
+  }
+  if(count==0){
+    cout<<"valid Parenthesized Arithmetic Expression\n";
+  }
+  else {
+    cout<<" NOT valid Parenthesized Arithmetic Expression\n";
+  }
 }
-int main(){
-    string str;
-    cin>>str;
-    if(check_parenthesis(str)==true){
-        cout<<"brakets are balanced";
-    }
-    else 
-        cout<<"brakets are UNbalanced";
-    return 0;
+int main() {
+  string str;
+  cin >> str;
+  check_parenthesis(str);
+  return 0;
 }

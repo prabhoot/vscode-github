@@ -1,25 +1,25 @@
 #include<iostream>
 using namespace std;
-#define stacksize 500
+#define stacksize 160
 struct stack {
-    char item[stacksize];
-    char top;
+    int item[stacksize];
+    int top;
 };
 struct stack s;
 void initial(){
     s.top=-1;
 }
-char Stacktop(){
+int stacktop(){
     return s.item[s.top];
 }
-char isempty(){
+int isempty(){
     if(s.top==-1){
         return 1;
     }
     else
         return 0;
 }
-void push(char x){
+void push(int x){
     if(s.top!=stacksize-1){
     s.top++;
     s.item[s.top]=x;
@@ -29,8 +29,8 @@ void push(char x){
         exit(1);
     }
 }
-char pop(){
-    if(s.top!=-1){char x=s.item[s.top];
+int pop(){
+    if(s.top!=-1){int x=s.item[s.top];
     s.top--;
     return x;}
     else{

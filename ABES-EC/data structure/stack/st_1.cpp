@@ -40,12 +40,15 @@ bool isempty() {
 }
 int main() {
   initilize();
+  cout<<" 1 for empty stack "<<isempty()<<endl  ;
   struct stack s;
   push(1);
   push(2);
-  cout << top();
+  cout <<"TOP: "<< top()<<endl;
   push(3);
+  cout<<"TOP: "<<top()<<endl;
   pop();
-  cout<<top();
+  cout<<"TOP: "<<top();
+  cout<<"0 for non empty stack "<<isempty();
   return 0;
 }
