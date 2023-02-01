@@ -14,6 +14,7 @@ int main() {
   // root=makenode(x);
   // create_tree(&root);
   cout << "preord_traversal: ";
+  ;
   preord_traversal(root);
   cout << endl;
   cout << "postord_traversal: ";
@@ -41,10 +42,10 @@ int main() {
   cout << "no. of leaf node in the tree is:  " << count_leaf(root) << endl;
   cout << "no. of n1 node in the tree is:  " << count_n1node(root) << endl;
   cout << "no. of n2 node in the tree is:  " << count_n2node(root) << endl;
+  cout << "to find the sum of nodes:  " << sum_of_nodes(root) << endl;
   cout << "height of the tree:  " << height_tree_0(root) << endl;
   cout << "to check the tree is strict or not:  " << strictly(root) << endl;
   cout << "to check the tree is complete or not:  " << complete(root) << endl;
-  cout << "to find the sum of nodes:  " << sum_of_nodes(root) << endl;
   cout << "the distance between maxi and min value is: "
        << distance_between_min_and_max(root) << endl;
   cout << "the diameter of the given tree is: " << diameter_tree(root) << endl;

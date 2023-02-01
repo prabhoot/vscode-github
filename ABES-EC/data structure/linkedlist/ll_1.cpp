@@ -1,4 +1,4 @@
-// Program for Linear Linked List Primitive operations
+ // Program for Linear Linked List Primitive operations
 #include <iostream>
 using namespace std;
 struct node{

@@ -6,7 +6,7 @@ struct node *build_expression_tree(string str,struct node *root) {
     char x = str[i];
     struct node *root=getnode(x);
     if (65 <= x && x <= 122){
-      push(s1, root)
+      push(s1, root);
     }
     i++;
   }
