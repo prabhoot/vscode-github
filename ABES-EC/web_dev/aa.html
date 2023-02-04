@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Agency</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Travel Agency</h1>
+    <nav>
+      <ul>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="destinations">
+      <h2>Popular Destinations</h2>
+      <ul>
+        <li>
+          <h3>Paris</h3>
+          <img src="paris.jpg" alt="Paris">
+          <p>Discover the city of love and lights with our Paris packages</p>
+        </li>
+        <li>
+          <h3>Rome</h3>
+          <img src="rome.jpg" alt="Rome">
+          <p>Explore the ancient ruins and charming streets of Rome</p>
+        </li>
+      </ul>
+    </section>
+    <section id="packages">
+      <h2>Our Packages</h2>
+      <form>
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination">
+          <option value="paris">Paris</option>
+          <option value="rome">Rome</option>
+        </select>
+        <label for="dates">Dates:</label>
+        <input type="text" id="dates" name="dates">
+        <button type="submit">Search Packages</button>
+      </form>
+    </section>
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <ul id="review-list">
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; Travel Agency 2023</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

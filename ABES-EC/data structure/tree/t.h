@@ -6,6 +6,7 @@
 #include <vector> 
 #include <stack>
 #include <ostream>
+#include <queue>
 #define size 10
 using namespace std;
 // **************basic initialisation********************
@@ -489,8 +490,10 @@ int n = sizeof(ht) / sizeof(ht[0]);
 }
  void delete_entire_tree(struct node **root) {
   if ((*root) == NULL) {
+    free(*root);
     return;
   }
+  // also add the root=NULL after the funtion call as this function will not delete the root node.
   delete_entire_tree(&(*root)->left);
   delete_entire_tree(&(*root)->right);
   cout << (*root)->data << " ";
