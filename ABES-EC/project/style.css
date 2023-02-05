@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+    /* background-color: antiquewhite; */
+}
+#navbar{
+    display: flex;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    padding: 14px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    /* background-color: pink; */
+}
+li:hover{
+    color:yellow;
+    font-style: italic;
+    background-color: red;
+    border-radius: 30px;
+}
+button{
+    flex-direction: row;
+}
+button:hover{
+    background-color: aqua;
+    border-radius: 30px;
+
+}
+aside:hover{
+    background-color: pink;
+    cursor: pointer;
+    /* border-color: ; */
+}
+#jambo{
+    /* z-index: -1; */
+    margin: 0px;
+    padding:0px;
+    display: inline;
+    visibility:unset;
+}
