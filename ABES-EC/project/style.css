@@ -4,16 +4,24 @@
 }
 header{
     display: flex;
+    justify-content: center;
     /* background-color: antiquewhite; */
+}
+aside{
+    display: flex;
 }
 #navbar{
     display: flex;
+    align-items: center;
 }
 ul{
+    align-items: center;
+    justify-content: center;
     display: flex;
     list-style: none;
 }
 li{
+    justify-content: center;
     padding: 14px;
 }
 a{
@@ -22,14 +30,25 @@ a{
 a:hover{
     /* background-color: pink; */
 }
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 li:hover{
     color:yellow;
     font-style: italic;
     background-color: red;
     border-radius: 30px;
+    justify-content: center;
 }
 button{
-    flex-direction: row;
+    /* /* text-align: right; */
+    /* justify-content: right; */
+    /* align: right; */
+    /* flex-direction: row; */
+
 }
 button:hover{
     background-color: aqua;
