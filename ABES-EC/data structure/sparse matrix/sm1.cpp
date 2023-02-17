@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 void ut_spmat(int mat[][4]){
-    int arr
+    int arr;
 }
 int main(){
     int mat[5][5]={
@@ -12,6 +12,5 @@ int main(){
         {0,0,0,1,2},
         {0,0,0,0,1}
     };
-
     return 0;
 }

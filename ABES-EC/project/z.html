@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form>
+        <input type="text" id="n" name="n" ><br>
+        <input type="password" name="p" id="p"><br>
+        <input type="button" name="submit" value=" okay" onclick="data()"> 
+    </form>
+</body>
+<script>
+    function data(){
+        var b=document.getElementById("n").value;
+        alert(b);
+    }
+    function data(){
+        var b=document.getElementById("n").value;
+        var d=document.getElementById("p").value;
+        if(b=="kanchan"){
+            if(d=="1234"){
+                alert("correct id and correct password");
+            }
+            else{
+                alert("correct id and wrong password");
+            }
+        }
+        else{
+            if(d=="1234"){
+                alert("wrong id and correct password");
+            }
+            else{
+                alert("wrong id and wrong password");
+            }
+        }
+    }
+</script>
+</html>
+
+
+<!-- alert("correct id and correct password" + b + " " + d); -->
