@@ -1,7 +1,9 @@
 // 11. Write a program to compare two dates entered by user. Make a structure
 // named Date to store the elements day, month and year to store the dates. If
 // the dates are equal, display "Dates are equal" otherwise display "Dates are
-// not equal". input:- 2003 05 22 2003 05 22
+// not equal". input:- 
+// 2003 10 17
+// 2003 10 17
 #include <iostream>
 using namespace std;
 struct dates {
@@ -10,6 +12,7 @@ struct dates {
   int day;
 };
 int main() {
+  cout<<"Kanchan's Code:\n";
   int t = 2;
   while (t--) {
     struct dates d[3];

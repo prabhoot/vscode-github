@@ -1,5 +1,8 @@
 // 8. Write a program to add, subtract and multiply two complex numbers using
-// structures to function. input:- 2 3 1 4
+// structures to function.
+//  input:- 
+// 1 2 
+// 3 4
 #include <iostream>
 using namespace std;
 struct complex {
@@ -24,6 +27,7 @@ void mul(complex c0, complex c1) {
 }
 
 int main() {
+  cout<<"Kanchan's Code:\n";
   struct complex c[2];
   for (int i = 0; i < 2; i++) {
     cin >> c[i].real >> c[i].imaginary;

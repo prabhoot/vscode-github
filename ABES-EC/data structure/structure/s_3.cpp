@@ -1,15 +1,18 @@
 // 3. Write a program to store and print the roll no., name, age, address and
 // marks of 3 students using structure.
 //  input:-
-// 1 prabhoot 19 varanasi 95 99 98 96 95 99 
-// 2 ram 19 Delhi 95 99 98 96 95 99 
-// 3 sita 19 lucknow 95 99 98 96 95 99
+// 1 kanchan 19 Hapur
+//  95 99 98 96 95 99 
+// 2 bhumi 19 Delhi 
+// 95 99 98 96 95 99 
+// 3 riya 19 lucknow 
+// 95 99 98 96 95 99
 #include <iostream>
 using namespace std;
 #define no_of_subjects 6
 #define no_of_students 3
-
 int main() {
+  cout<<"Kanchan's Code:\n";
   struct student {
     int rollno;
     string name;

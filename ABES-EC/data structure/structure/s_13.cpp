@@ -87,19 +87,20 @@ void issue_book(struct library l[], int x) {
   cout << endl;
 }
 int main() {
+  cout<<"Kanchan's Code:\n";
   int n = 1;
   struct library l[10];
-  l[0] = {1, "Devika Rangachari", "Queen of Fire", 1};
-  l[1] = {2, "Bimal Jalal", "The India Story", 1};
-  l[2] = {3, "Ruskin Bond", "Listen to Your Heart", 1};
-  l[3] = {4, "Ruskin Bond", "Hear Yourself", 0};
+  l[0] = {1, "auth_1","title_1", 1};
+  l[1] = {2, "auth_2","title_2", 0};
+  l[2] = {3, "auth_2","title_3", 1};
+  l[3] = {4, "auth_4","title_3", 0};
   cout << " this is a e-library\n";
   while (n != 0) {
     cout << "1 - Display book information\n";
     cout << "2 - Add a new book\n";
     cout << "3 - Display all the books in the library of a particular author\n";
     cout << "4 - Display the number of books of a particular title\n";
-    cout << "5 - Display the total number of books in the library\n";
+    cout << "5 - Display the total number of boxoks in the library\n";
     cout << "6 - Issue a book\n";
     cout << "0 - To exit the library\n";
     cin >> n;

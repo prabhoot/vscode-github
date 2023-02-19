@@ -3,17 +3,18 @@
 // from 1), name and age of 5 students and then print the details of the student
 // with roll no. 1.
 // input:-
-// 1 prabhoot 19 95 99 98 96 95 99
-// 2 ram 19 95 99 98 96 95 99
-// 3 sita 19 95 99 98 96 95 99
-// 4 rohit 19 95 99 98 96 95 99
-// 5 sachin 19 95 99 98 96 95 99
+// 1 Bhumi 19 95 99 98 96 95 99
+// 2 Manasvi 19 95 99 98 96 95 99
+// 3 Nandini 19 95 99 98 96 95 99
+// 4 Aditi 19 95 99 98 96 95 99
+// 5 Kanchan 19 95 99 98 96 95 99
 #include <iostream>
 #include <string>
 #define no_of_students 5
 #define no_of_subjects 6
 using namespace std;
 int main() {
+  cout<<"Kanchan's Code:\n";
   struct student {
     int rollno;
     string name;

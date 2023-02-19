@@ -5,9 +5,9 @@
 // roll no. - Write another function to display the details of the student whose
 // roll no is given (i.e. roll no. entered by the user).
 //  input:-
-// 1 prabhoot 14 varanasi
-// 2 ram 14 Delhi
-// 3 sita 11 lucknow
+// 1 Kanchan 14 Hapur
+// 2 Shweta 14 Delhi
+// 3 ritu 11 lucknow
 #include <iostream>
 #define no_of_students 3
 using namespace std;
@@ -38,7 +38,7 @@ void print_stu_age_14(student s[]) {
   }
 }
 int main() {
-
+cout<<"Kanchan's Code:";
   struct student s[no_of_students];
   for (int i = 0; i < no_of_students; i++) {
     cin >> s[i].rollno >> s[i].name;

@@ -1,7 +1,7 @@
 // 6. Write a program to add two time in hour, minute and second using structure. The values of the time is to be taken from the user.
 // input:-
-// 1 15 15
-// 2 45 30
+// 1 23 45
+// 6 7 9
 #include <iostream>
 using namespace std;
 #define n 2
@@ -11,6 +11,7 @@ struct time{
     int second;
 };
 int main(){
+    cout<<"Kanchan's Code:\n";
 struct time t[3];
 cout<<"enter time in the form of hour min sec:"<<endl;
 for(int i=0;i<n;i++){
