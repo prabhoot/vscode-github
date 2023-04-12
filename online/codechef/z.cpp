@@ -1,11 +1,7 @@
 #include <iostream>
 using namespace std;
-int main(){
-    char a{67};
-     while(1){
-      cin>>a;
-        cout<<char(a);
-    }
-  
-    return 0;
+int main() {
+  float n = 1;
+    cout<<(n/100);
+  return 0;
 }

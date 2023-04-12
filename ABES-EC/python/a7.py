@@ -1,2 +1,2 @@
-if (2,1):
-   print("hello")
+import time
+print(time.strftime("%d-%m-%Y"))

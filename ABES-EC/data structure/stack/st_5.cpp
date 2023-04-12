@@ -1,7 +1,7 @@
 // Program for Decimal to Any Base Conversion
 #include "stack.h"
 void decimal_to_anybase(int n, int base) {
-  char arr[]{'A', 'B', 'C', 'D', 'E', 'F'};
+  char arr[]{'A', 'B', 'C', 'D', 'E', 'F','G','H'};
   while (n) {
     push(n % base);
     n = n / base;
