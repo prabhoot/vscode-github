@@ -17,7 +17,7 @@ int main() {
   struct node *l1 = NULL;
   struct node *l2 = NULL;
   iend(&l1, "b");
-  ibeg(&l1, "a");
+  insbeg(&l1, 2);
   iaft(&l1, "b", "c");
   traverse(&l1);
   cout << endl;

@@ -57,15 +57,6 @@ int delend(struct node **start){
     return x;
     free(p->next);
 }
-// void traverse(struct node **start){
-//     struct node *p;
-//     p=*start;
-//     while(p!=NULL){
-//     cout<<p->info<<" ";
-//     p=p->next;
-//     }
-    
-// }
 void travese(struct node *start){
     if ((start)!=NULL) {
     cout<<(start)->info<<" ";
@@ -93,15 +84,6 @@ void insaft(struct node **start,int a,int x){
         temp=temp->next;
     }
 }
-// void ordins(struct node **start,int x){
-//     struct node *p=*start;
-//     while(p->next!=NULL&&((p->next)->info<=x)){
-//         p=p->next;
-//     }
-//             insaft(start,p->info,x);
-//             return;
-// }
-
 void insend(struct node **start,int x){
     struct node *temp;
     temp=*start;

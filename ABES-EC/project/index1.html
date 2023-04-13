@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Eren Şenel | Login Menü</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+          <div class="user-box">
+            <input  id="n" type="text" name="" required="">
+            <label>Use name</label>
+          </div>
+          <div class="user-box">
+            <input  id="p" type="password" name="" required="">
+            <label>password</label>
+          </div>
+          <a href="/index.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="button" name="submit" value="click" onclick="data()">
+          </a>
+        </form>
+      </div>
+</body>
+<script>
+  function data(){
+      var b=document.getElementById("n").value;
+      alert(b);
+  }
+  function data(){
+      var b=document.getElementById("n").value;
+      var d=document.getElementById("p").value;
+      if(b=="kanchan"){
+          if(d=="1234"){
+              alert("correct id and correct password");
+              window.open(
+            "/index.html", "_blank");
+          }
+          else{
+              alert("correct id and wrong password");
+          }
+      }
+      else{
+          if(d=="1234"){
+              alert("wrong id and correct password");
+          }
+          else{
+              alert("wrong id and wrong password");
+          }
+      }
+  }
+</script>
+</html>

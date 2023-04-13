@@ -101,3 +101,9 @@ for(auto i:v){
 }
   return 0;
 }
+// if u have a vector of pairs and u want to sort them on the basic of first or the second value of the pair .
+// just call for a sort(v.begin(),v.end(),function).
+// the third parameter is a user defined function.
+// function(pair<int, int> p1, pair<int, int> p2){
+// return p1.first<p2.first;}
+// this is on the basics of first_element;

@@ -1,5 +1,5 @@
 // Program for Decimal to Hexadecimal Conversion.
-#include "sf.h"
+#include "stack.h"
 using namespace std;
 void decimal_to_hexadecimal(int n){
     char arr[]{'A','B','C','D','E','F'};
@@ -17,7 +17,7 @@ void decimal_to_hexadecimal(int n){
     }
 }
 int main(){
-   initial(s);
+   initial();
    int n;
    cin>>n;
    cout<<"0x";
