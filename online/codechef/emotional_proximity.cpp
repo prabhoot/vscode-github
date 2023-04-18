@@ -13,7 +13,7 @@ int main() {
     } else {
       p = p - (p * x) / 100;
     }
+  cout << fixed << setprecision(10) << p<<endl;
   }
-  cout << fixed << setprecision(10) << p << " ";
   return 0;
 }
