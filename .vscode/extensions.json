@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "formulahendry.code-runner"
+        "formulahendry.code-runner",
+        "esbenp.prettier-vscode",
+        "llvm-vs-code-extensions.vscode-clangd"
     ]
 }
