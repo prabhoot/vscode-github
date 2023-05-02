@@ -31,12 +31,12 @@ int main(){
         wat.push_back(tat[i]-c);
     }
     cout<<"Tabular form->\n";// Tabular form : 
-    cout<<"at"<<setw(10)<<"pid"<<setw(10)<<"bt"<<setw(10)<<"ct"<<setw(10)<<"tat"<<setw(10)<<"wat"<<setw(10)<<"rt"<<endl;
+    cout<<setw(10)<<"at"<<setw(10)<<"pid"<<setw(10)<<"bt"<<setw(10)<<"ct"<<setw(10)<<"tat"<<setw(10)<<"wat"<<setw(10)<<"rt"<<endl;
     for(int i=0;i<n;i++){
      auto a=v[i].first;
      auto b=v[i].second.first;
      auto c=v[i].second.second;
-     cout<<a<<setw(10)<<b<<setw(10)<<c<<setw(10)<<ct[i]<<setw(10)<<tat[i]<<setw(10)<<wat[i]<<setw(10)<<rt[i]<<endl;
+     cout<<setw(10)<<a<<setw(10)<<b<<setw(10)<<c<<setw(10)<<ct[i]<<setw(10)<<tat[i]<<setw(10)<<wat[i]<<setw(10)<<rt[i]<<endl;
     }
     cout<<"\n\n";
     cout<<"Gantt chart->\n";// Gantt chart :
