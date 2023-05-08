@@ -1,7 +1,7 @@
 {
-  "C_Cpp.errorSquiggles": "disable",
+  // "C_Cpp.errorSquiggles": "disable",
   "C_Cpp.default.enableConfigurationSquiggles": true,
-  "C_Cpp.intelliSenseEngine": "Default",
+  // "C_Cpp.intelliSenseEngine": "Default",
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
@@ -144,5 +144,8 @@
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
-  "editor.fontSize": 15
+  "editor.fontSize": 15,
+  "html.format.wrapAttributes": "auto",
+  "prettier.printWidth": 300,
+  "json.format.enable": false
 }
