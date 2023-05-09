@@ -7,10 +7,7 @@ import Home from "./components/Home";
 const App = () => {
   return (
     <>
-      <Home/>
-      <Switch>
         <Route path="/" Component={Home}/>
-      </Switch>
     </>
   );
 };
