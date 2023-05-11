@@ -1,10 +1,7 @@
 import React from "react";
-import "./App.css";
 export default function Sign_up() {
   return (
     <>
-    <style>
-    </style>
       <div>
         <section class="vh-100">
           <div class="container py-5 h-100">
