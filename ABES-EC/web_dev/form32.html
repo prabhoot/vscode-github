@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    name:<input type="text" id="myid_1">
+    name:<input type="text" id="myid_2">
+    <button onclick="display()">click here</button>
+    <script>
+        function display() {
+            let a = Number(document.getElementById("myid_1").value);
+            let b = Number(document.getElementById("myid_2").value);
+            document.write(a+b);
+        }
+    </script>
+</body>
+
+</html>
