@@ -1,0 +1,10 @@
+.para{
+    border: 5px solid red;
+    width: 500px;
+    display: flex;
+    align-items: left;
+}
+.my{
+    display: block;
+    align-items: ;
+}

@@ -1,0 +1,3 @@
+npx create-react-app counter_app
+i am making a counter app just to learn react hooks 
+in this it is specially the usestate hooks it is for 
