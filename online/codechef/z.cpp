@@ -12,33 +12,16 @@
   cout.tie(0);
 using namespace boost::multiprecision;
 using namespace std;
-bool sortbyCond(const pair<int, int>& a,
-                const pair<int, int>& b)
-{
-    if (a.first != b.first)
-        return (a.first < b.first);
-    else
-       return (a.second > b.second);
-}
 const ll N = 1e6;
 void solve() {
-  int n,k,l;
-  cin>>n>>k>>l;
-  vector<pair<int,int>>v;
-  int a,b;
-  for(int i=0;i<n;i++){
-    cin>>a>>b;
-    if(b==l){v.push_back(make_pair(a,b));}
+  int n,m;
+  cin>>n,m;
+  if(((n+m)%2==0)&&(abs(n-m)%2==0)){
+      cout<<"yes\n";
   }
-    sort(v.begin(),v.end());
-    int sum=0;int i=0;
-    while(k--){
-      sum+=v[i].first;i++;
-    }
-    if(v.size()!=0){
-      cout<<sum<<endl;
-    }
-    else{cout<<"-1\n";}
+  else{
+    cout<<"no\n";
+  }
 }
 int main() {
   io;
