@@ -1,14 +1,15 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Sign_up from "./Signup";
-// import App from "../App";
+import Slider from "./Slider";
 const Home=()=> {
   return (
     <>
       <section id="navbar">
         <Navbar title="Travel Agency" />
       </section>
-    {/* <Sign_up/> */}
+    <section className="slider">
+      <Slider/>
+    </section>
     </>
   );
 };

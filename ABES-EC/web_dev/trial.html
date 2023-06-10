@@ -1,13 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script>
-class student{
-    name(a){
-        document.write("you entered "+a+" name");
-    }
-}
-let x=new student;
-x.name("prabhoot");
-</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>June 9</title>
+    <script>
+        class A extends Date{
+            d(){
+                getDate();
+                getFullYear();
+                getMonth();
+            } 
+        }
+        var ob=new A();
+        document.write(ob.getDate()+" "+(ob.getMonth()+1)+" "+ob.getFullYear());
+    </script>
 </head>
+<body>
+    
+</body>
 </html>
