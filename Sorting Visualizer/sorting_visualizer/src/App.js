@@ -35,7 +35,7 @@ class App extends Component {
     let bars = this.state.array.map((value, index) => {
       return (
         <>
-          <Bar key={value} index={index} length={value} color={this.state.colorKey[index]} />
+          <Bar key={value} index={index} length={value} color={0} />
           {/* {value} */}
         </>
       )
