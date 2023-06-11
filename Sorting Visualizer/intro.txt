@@ -1,0 +1,3 @@
+generate random array
+set width to the bars acc to height
+then style the bars
