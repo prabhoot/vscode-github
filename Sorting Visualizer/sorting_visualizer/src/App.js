@@ -42,8 +42,13 @@ class App extends Component {
     })
     return (
       <div className="app">
-        {bars}
+        <div className="frame">
+          <div className="barsDiv container card">{bars}</div>
+        </div>
+        <div className="control-pannel"></div>
+        <div className="pannel"></div>
       </div>
+
     );
   }
 }

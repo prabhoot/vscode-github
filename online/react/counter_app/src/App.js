@@ -36,7 +36,6 @@ export default function App() {
       .then(json => setItems(json))
     console.log("setchange")
   }, [resourceType])   // when the resource type change the useffect will change 
-
   // useEffect(()=>{
   //   console.log("setchange")
   // },[]) this empty bracket will ensure that the content will only once (i.e.-onmount)

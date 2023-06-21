@@ -11,7 +11,7 @@ export default function Navbar(props) {
                 <a className="navbar-brand fs-3 fw-bold" href="_blank">
                   {props.title}
                 </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bdb-toggle="collapse" data-bdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent ms-5">
@@ -62,10 +62,10 @@ export default function Navbar(props) {
                       </ul>
                     </li>
                   </ul>
-                  {/* <form class="w-auto">
-                    <input type="search" class="form-control" placeholder="Type query" aria-label="Search"/>
-                  </form> */}
-                  <div className="btn-group me-5">
+                  <form class="w-auto me-5">
+                    <input type="search" class="form-control " placeholder="Search on Page" aria-label="Search" />
+                  </form>
+                  <div className="btn-group me-5 ml-5">
                     <button type="button" className="btn btn-success">
                       Log in
                     </button>

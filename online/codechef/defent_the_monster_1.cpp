@@ -1,19 +1,26 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int main(){
-   int t{};
-  cin>>t;
-while(t--){
-    float x=0;
-    float y=0;
-    float h=0;
-    cin>>h>>x>>y;
-    if(x<=y){
-        cout<<"0\n";
+    int t=0;
+    cin>>t;
+    while(t--){
+        long long int a=0;
+        cin>>a;
+        long long int sum=0, current=0;
+       for(long long int i=1;i<a;i++){
+           if(i%15==0){
+               sum+=i;
+               continue;
+           }
+            else if(i%3==0){
+               sum+=i;
+               continue;
+            }
+           else if(i%5==0){
+           sum+=i;
+           }
+       }
+        cout<<sum<<endl;
     }
-    else {
-    cout<<"1\n";
-    }
-}
     return 0;
 }
