@@ -8,7 +8,6 @@ def insertionSort(arr):
                 arr[j+1] = arr[j]
                 j -= 1
         arr[j+1] = key
-
 arr = list(map(int, input("Enter multiple values: ").split()))  
 print("Given array is:")
 print(arr)

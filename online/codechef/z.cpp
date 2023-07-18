@@ -3,8 +3,8 @@
 #include <boost/multiprecision/cpp_int.hpp>//int1024_t n
 #define ll long long
 #define all(x) (x).begin(), (x).end()
-#define f0(i,n) for(ll i=0;i<n;i++)
-#define f1(i,n) for(ll i=1;i<=n;i++)
+#define f0(n) for(ll i=0;i<n;i++)
+#define f1(n) for(ll i=1;i<=n;i++)
 #define iv ll n=0;cin>>n;vector<ll>v(n); f0(i,n) cin>>v[i];
 #define io                                                                     \
   ios_base::sync_with_stdio(0);                                                \
@@ -14,26 +14,16 @@ using namespace boost::multiprecision;
 using namespace std;
 const ll N = 1e6;
 void solve() {
-    int n;
-    cin>>n;
-    string temp;
-    vector<int> map(n);
-    for(int i=0;i<n;i++){
-        cin>>temp;
-        if(temp=="A"){
-            map[0]++;
-        }
-        else if (temp=="B"){
-            map[1]++;
-        }
-        else if(temp=="AB"){
-            map[2]++;
-        }
-        else{
-            map[3]++;
-        }
+   int n, m;
+    cin >> n >> m;
+    ll temp;
+    vector<int> v(m);
+    int sum = 0;
+    f0(m) {
+        cin >> v[i];
     }
-    cout<<map[2]+map[3]+max(map[1],map[0])<<endl;
+    vector<int>dat(n);
+    
 }
 int main() {
   io;

@@ -1,52 +1,11 @@
-// #include <bits/stdc++.h>
-// #include <boost/multiprecision/cpp_int.hpp>
-// #define ll long long
-// #define all(x) (x).begin(), (x).end()
-// #define yes cout << "YES"
-// #define no cout << "NO"
-// #define io                        \
-//     ios_base::sync_with_stdio(0); \
-//     cin.tie(0);                   \
-//     cout.tie(0);
-// using namespace boost::multiprecision;
-// using namespace std;
-// const ll N = 1e6;
-// void solve()
-// {
-//     ll n;
-//     cin >> n;
-//     ll a[n];
-//     for (int i = 0; i < n; i++)
-//     {
-//         cin >> a[i];
-//     }
-//     ll count=0;
-//     for(int i=0;i<n;i++){
-//         for(int j=i;j<n;j++){
-//             if((a[j]-a[i])!=(a[i]-a[j])){
-//                 count++;
-//             }
-//         }
-//     }
-//     cout<<count<<endl;
-// }
-// int main()
-// {
-//     io;
-//     int t{};
-//     cin >> t;
-//     while (t--)
-//     {
-//         solve();
-//     }
-//     return 0;
-// }
+//Prabhoot
 #include <bits/stdc++.h>
-#include <boost/multiprecision/cpp_int.hpp>
+#include <boost/multiprecision/cpp_int.hpp>//int1024_t n
 #define ll long long
 #define all(x) (x).begin(), (x).end()
-#define yes cout << "YES"
-#define no cout << "NO"
+#define f0(i,n) for(ll i=0;i<n;i++)
+#define f1(i,n) for(ll i=1;i<=n;i++)
+#define iv ll n=0;cin>>n;vector<ll>v(n); f0(i,n) cin>>v[i];
 #define io                                                                     \
   ios_base::sync_with_stdio(0);                                                \
   cin.tie(0);                                                                  \
@@ -55,24 +14,21 @@ using namespace boost::multiprecision;
 using namespace std;
 const ll N = 1e6;
 void solve() {
-    ll n;
+    int n;
     cin>>n;
-    vector<ll> a(n);
-    for(int i=0;i<n;i++){
-        cin>>a[i];
+    vector<int> v(100000);
+    n = 2 * n;
+    int t;
+    while (n--) {
+        cin >> t;
+        v[t]++;
     }
-    map<ll,ll>m;
-    for(auto i:a){
-        m[i]++;
+    int maxi = -1;
+    for (auto i : v) {
+        maxi = max(maxi, i);
     }
-    ll total_subarrays=(n*(n-1))/2;
-    ll stable_subarray=0;
-    for(auto i:m){
-        stable_subarray+=(i.second*(i.second-1))/2;
-    }
-    total_subarrays-=stable_subarray;
-    cout<<total_subarrays<<endl;
-
+    cout << maxi << endl;
+    return ;
 }
 int main() {
   io;
