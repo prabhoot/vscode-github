@@ -60,10 +60,33 @@
 // cloning in js
 // 1.iltration
 
-function shape (){
-        this.length=1,
-        this.breadth=3
-    }
-}
-let a =new shape();
-console.log(shape.length)
+// let src={
+//     a:10,
+//     b:20,
+// }
+// let des={}
+// for (let i in src){
+//      des[i]=src[i]
+// }
+// console.log(des)
+
+// 2. assign :
+// let src = {
+//     a: 10,
+//     b: 20,
+// }
+// let dest = Object.assign({}, src)
+// console.log(dest)
+
+// 3.spread 
+// src = {
+//         a: 10,
+//         b: 20,
+//     }
+//     let dest={...src}
+//     console.log(dest)
+//     src.a++
+//     console.log(src)
+//     console.log(dest)
+
+//arrays
