@@ -2,6 +2,9 @@
 // console.log("hello")
 // // lets create an Object
 
+const {log} = require("console");
+const {CHAR_NO_BREAK_SPACE} = require("picomatch/lib/constants");
+
 // let rectangle = {
 //     //to add properties
 //     length: 1,
@@ -90,3 +93,63 @@
 //     console.log(dest)
 
 //arrays
+// console.log(n.sort((a,b)=>{return a-b}))
+// console.log(n.sort((a,b)=>b-a))
+// n.push(23)
+// n.unshift(2)
+// n.reverse()
+
+// console.log(n.every(x=> x<0))
+// console.log(n.filter(x=>x<50))
+// n=n.join('_')
+// console.log(n)
+
+//Objects
+// let rectangle={
+//     length:1,
+//     breadth:3
+// }
+// console.log(rectangle)
+// function change (a,b){
+//    return rectangle={
+//     length:a,
+//     breadth:b
+// }
+// }
+
+// function change(a,b){
+//     this.dimension={
+//         length:2,
+//         breadth:3,
+//     }
+// }
+// let a= new change(3,3)
+// console.log()
+
+// console.log(change(0 ,0))
+
+// function sum(){
+//     let total =0;
+//     for (let i of arguments){
+//         total+=i;
+//     }
+//     console.log(total)
+// }
+
+// sum(1,2,3,4)
+
+let person = {
+    fname: "prabhoot",
+    lname: "patel",
+    get print_name() {
+         console.log(`${person.fname} ${person.lname}`)
+    },
+    set print_name(value) {
+        let data = value.split(" ")
+        this.fname = data[0];
+        this.lname = data[1];
+        console.log(`${person.fname} ${person.lname}`)
+    }
+}
+person.print_name
+person.print_name ="harsh mishra"

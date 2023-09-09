@@ -179,5 +179,8 @@
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
   }
 }
