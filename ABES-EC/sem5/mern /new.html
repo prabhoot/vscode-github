@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+</head>
+<body>
+    <h1>
+        Welcome to the page.
+    </h1>
+    <script>
+    // alert("hello do you want to proceed"); 
+    function table(a){
+        for(let i=1;i<=10;i++){
+            var ans=i*a;
+            console.log(ans);
+        }
+    }
+    // var x=confirm("do you want to proceed further ");
+    var x=prompt("do you want to proceed further","6");
+    if(x){
+        document.getElementsByTagName("body")[0].style.backgroundColor="violet";
+        for(let i=1;i<=10;i++){
+            var ans=i*x;
+            document.write(ans," ");
+        }
+        
+    }
+    </script>
+</body>
+</html>
