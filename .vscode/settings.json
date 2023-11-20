@@ -144,7 +144,7 @@
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "html.format.wrapAttributes": "auto",
   "prettier.printWidth": 300,
   "json.format.enable": true,
