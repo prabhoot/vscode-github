@@ -16,7 +16,7 @@ pair<unordered_map<unordered_set<char>, unordered_map<char, unordered_set<char>>
     const unordered_set<char>& nfaAcceptStates,
     const unordered_set<char>& alphabet
 ) {
-    unordered_map<unordered_set<char>, unordered_map<char, unordered_set<char>>> dfaTransitions;
+    unordered_map<unordered_set<char>, unordered_map<char, unordered_set<char>>>dfaTransitions;
     vector<unordered_set<char>> dfaAcceptStates;
 
     queue<unordered_set<char>> queue;

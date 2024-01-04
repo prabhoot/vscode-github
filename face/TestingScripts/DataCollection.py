@@ -5,7 +5,7 @@ import cvzone
 from cvzone.FaceDetectionModule import FaceDetector
 
 ####################################
-classID = 0  # 0 is fake and 1 is real
+classID = 1  # 0 is fake and 1 is real
 outputFolderPath = '/home/prabhoot/vscode-github/face/Dataset/DataCollect'
 confidence = 0.8
 save = True
