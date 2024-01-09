@@ -14,20 +14,15 @@ const connecttodatabase = async () => {
     console.log(err);
   }
 };
-// const toFind = {_id: new ObjectId('658fdfbfc6cbcc9ed7ff96cd')};
-const toFind = {age: {$gt: 20}}
+const toUpdate = {_id: new ObjectId('658fdfbfc6cbcc9ed7ff96cd')}
+const updated = {$inc:{age:-21}}
 const main = async () => {
   try {
     connecttodatabase();
-    // let result = await accountCollection.findOne(toFind);
-    let results = await accountCollection.find(toFind);
-    let count = await accountCollection.countDocuments(toFind);
-    console.log(`find ${count} document\n`);
-    // console.log(result);
-    // await results.forEach(doc=>console.log(doc));
-    for await (doc of results) {
-      console.log(doc);
-    }
+    let result = await accountCollection.updateOne(toUpdate, updated);
+    result.modifiedCount == 1 ? console.log("Updated") : console.log("Can't updated");
+    console.log(result);
+    console.log(await accountCollection.findOne({name:"prabhoot"}))
   } catch (err) {
     console.log(err);
   } finally {

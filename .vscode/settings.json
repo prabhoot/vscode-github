@@ -147,8 +147,17 @@
   "editor.fontSize": 14,
   "html.format.wrapAttributes": "auto",
   "prettier.printWidth": 300,
+  "prettier.jsxSingleQuote":true,
   "json.format.enable": true,
-  "editor.minimap.autohide": false,
+  "editor.minimap.autohide": true,
+  "editor.hover.enabled": true,
+  "editor.fontLigatures": true,
+  "explorer.compactFolders": false,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/node_modules":true,
+  },
+  "terminal.integrated.cursorBlinking": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
@@ -164,6 +173,10 @@
   "code-runner.saveFileBeforeRun": true,
   "files.autoSaveDelay": 100,
   "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.sortImports":true,
+  },
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -175,7 +188,8 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "vscode.css-language-features",
+    "editor.suggest.insertMode": "replace"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
@@ -188,5 +202,8 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": [
+    "totalzip"
+  ]
 }
