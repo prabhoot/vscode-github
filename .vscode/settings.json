@@ -154,9 +154,6 @@
   "editor.fontLigatures": true,
   "explorer.compactFolders": false,
   "files.trimTrailingWhitespace": true,
-  "files.exclude": {
-    "**/node_modules":true,
-  },
   "terminal.integrated.cursorBlinking": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
@@ -205,5 +202,6 @@
   },
   "cSpell.words": [
     "totalzip"
-  ]
+  ],
+
 }
