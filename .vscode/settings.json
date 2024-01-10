@@ -171,8 +171,8 @@
   "files.autoSaveDelay": 100,
   "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.sortImports":true,
+    "source.fixAll": "explicit",
+    "source.sortImports": "explicit"
   },
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
   "[html]": {
