@@ -3,7 +3,6 @@ import Main from "./components/Main";
 function App() {
   return (
     <>
-    hi
     <Main/>
     </>
   );
