@@ -47,3 +47,7 @@
   color:blue;
   cursor: pointer;
 }
+
+#danger{
+    color: red;
+}

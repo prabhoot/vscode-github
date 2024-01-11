@@ -138,7 +138,7 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": false,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
   "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": false,
   "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": false,
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
@@ -149,7 +149,7 @@
   "prettier.printWidth": 300,
   "prettier.jsxSingleQuote":true,
   "json.format.enable": true,
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": false,
   "editor.hover.enabled": true,
   "editor.fontLigatures": true,
   "explorer.compactFolders": false,
@@ -203,5 +203,6 @@
   "cSpell.words": [
     "totalzip"
   ],
+  "editor.minimap.renderCharacters": false,
 
 }
