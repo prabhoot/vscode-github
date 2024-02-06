@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from 'react';
+import ReactLoading from "react-loading";
+import {toast} from 'react-toastify';
 import Cards from './Cards';
 import {apiUri, filterData} from './Data';
 import Filter from './Filter';
-import {toast} from 'react-toastify'
-import ReactLoading from "react-loading";
 
 function Main() {
 
   const [courses, setCourses] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState("All");
+
   async function fetchData() {
     try {
       setLoading(true);
@@ -30,8 +32,8 @@ function Main() {
       <div className="main">
         <nav><h1>Top Courses</h1></nav>
       </div>
-      <Filter filterData={filterData} />
-      <div>{loading ? <ReactLoading type="spinningBubbles" color="#FFF" /> : <Cards Courses={courses} />}
+      <Filter key={filterData.id} filterData={filterData} categories={categories} setCategories={setCategories} />
+      <div>{loading ? <ReactLoading type="spinningBubbles" color="#FFF" /> : <Cards key={courses.id} Courses={courses} categories={categories} />}
       </div>
     </>
   )

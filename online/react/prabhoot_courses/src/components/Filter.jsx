@@ -1,12 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-function Filter({filterData}) {
+function Filter(props) {
+  const {filterData, categories, setCategories} = props;
+  function categoryHandler(title) {
+    setCategories(title);
+  }
   return (
     <>
-      {filterData.map((data)=>{
-        return(<button>{data.title}</button>)
-      })
-      }
+      <div className="filter-wrapper">
+        {filterData.map((data) => {
+          return (<div className="filter" onClick={() => {categoryHandler(data.title)}}><button className={categories===data.title ?'btn-unselect':"btn"}>{data.title}</button></div>)
+        })
+        }</div>
     </>
   )
 }

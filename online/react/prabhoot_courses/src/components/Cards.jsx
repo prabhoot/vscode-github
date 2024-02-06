@@ -12,19 +12,24 @@ export const sample = {
 };
 function Cards(props) {
   let Courses = props.Courses.data;
-  let allCourses = [];
+  let categories = props.categories;
+  let coursesToShow = [];
   function getAllCourses() {
     for (let i of Object.values(Courses)) {
       for (let j of i) {
-        allCourses.push(j);
+        coursesToShow.push(j);
       }
     }
   }
-  getAllCourses();
-  console.log(allCourses);
+  function getSpecificCourses(categories) {
+    coursesToShow=Courses[categories];
+  }
+  if (categories === "All") {
+    getAllCourses();
+  } else {getSpecificCourses(categories);}
   return (
     <>
-      <div className="wrapper">{allCourses.map(data => {return (<Card {...data} />)})}
+      <div className="wrapper">{coursesToShow.map(data => {return (<Card {...data} />)})}
       </div>
     </>
   )
