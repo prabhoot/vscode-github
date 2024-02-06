@@ -138,7 +138,7 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": false,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": false,
   "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": false,
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
@@ -171,8 +171,8 @@
   "files.autoSaveDelay": 100,
   "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.sortImports": "explicit"
+    "source.fixAll": "always",
+    "source.sortImports": "always"
   },
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
   "[html]": {
