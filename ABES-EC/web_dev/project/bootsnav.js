@@ -1,4 +1,4 @@
-// ------------------------------------------------------------------------------ //
+h// ------------------------------------------------------------------------------ //
 
 //
 
@@ -24,7 +24,7 @@
 
 	"use strict";
 
-    
+
 
     var bootsnav = {
 
@@ -42,7 +42,7 @@
 
         event : function(){
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -52,11 +52,11 @@
 
             var getNav = $("nav.navbar.bootsnav");
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
-            // Navbar Sticky 
+            // Navbar Sticky
 
             // ------------------------------------------------------------------------------ //
 
@@ -68,17 +68,17 @@
 
                 getNav.wrap("<div class='wrap-sticky'></div>");
 
-            }   
+            }
 
-            
 
-            // ------------------------------------------------------------------------------ //
-
-            // Navbar Center 
 
             // ------------------------------------------------------------------------------ //
 
-            if( getNav.hasClass("brand-center")){                
+            // Navbar Center
+
+            // ------------------------------------------------------------------------------ //
+
+            if( getNav.hasClass("brand-center")){
 
                 var postsArr = new Array(),
 
@@ -86,11 +86,11 @@
 
                     $postsList = index.find('ul.navbar-nav');
 
-				
+
 
 				index.prepend("<span class='storage-name' style='display:none;'></span>");
 
-                
+
 
                 //Create array of all posts in lists
 
@@ -108,7 +108,7 @@
 
                 });
 
-                
+
 
                 //Split the array at this point. The original array is altered.
 
@@ -118,7 +118,7 @@
 
                     ListHTML = '';
 
-                
+
 
                 var createHTML = function(list){
 
@@ -132,7 +132,7 @@
 
                 }
 
-                
+
 
                 //Generate HTML for first list
 
@@ -142,7 +142,7 @@
 
                 index.find("ul.nav").first().addClass("navbar-left");
 
-                
+
 
                 //Generate HTML for second list
 
@@ -154,7 +154,7 @@
 
                 index.find("ul.nav").last().addClass("navbar-right");
 
-                
+
 
                 //Wrap navigation menu
 
@@ -162,11 +162,11 @@
 
                 index.find("ul.nav.navbar-right").wrap("<div class='col-half right'></div>");
 
-                
+
 
                 //Selection Class
 
-                index.find('ul.navbar-nav > li').each(function(){ 
+                index.find('ul.navbar-nav > li').each(function(){
 
                     var dropDown = $("ul.dropdown-menu", this),
 
@@ -178,7 +178,7 @@
 
                 });
 
-				
+
 
 				var getName = $(".storage-name").html();
 
@@ -186,17 +186,17 @@
 
 					$( "ul.navbar-nav > li:contains('" + getName + "')" ).addClass("active");
 
-				}		
+				}
 
-            } 
+            }
 
-            
 
-            
+
+
 
             // ------------------------------------------------------------------------------ //
 
-            // Navbar Sidebar 
+            // Navbar Sidebar
 
             // ------------------------------------------------------------------------------ //
 
@@ -214,11 +214,11 @@
 
             }
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
-            // Menu Center 
+            // Menu Center
 
             // ------------------------------------------------------------------------------ //
 
@@ -228,7 +228,7 @@
 
             }
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -256,7 +256,7 @@
 
             }
 
-                
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -280,7 +280,7 @@
 
                 });
 
-                
+
 
                 $(window).on("resize", function(){
 
@@ -290,7 +290,7 @@
 
             }
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -318,7 +318,7 @@
 
             }
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -346,7 +346,7 @@
 
             }
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -360,7 +360,7 @@
 
             });
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -368,7 +368,7 @@
 
             // ------------------------------------------------------------------------------ //
 
-            $("nav.navbar.bootsnav .attr-nav").each(function(){  
+            $("nav.navbar.bootsnav .attr-nav").each(function(){
 
                 $("li.search > a", this).on("click", function(e){
 
@@ -386,7 +386,7 @@
 
             });
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -394,7 +394,7 @@
 
             // ------------------------------------------------------------------------------ //
 
-            $("nav.navbar.bootsnav .attr-nav").each(function(){  
+            $("nav.navbar.bootsnav .attr-nav").each(function(){
 
                 $("li.side-menu > a", this).on("click", function(e){
 
@@ -416,13 +416,13 @@
 
                 $("body").removeClass("on-side");
 
-            });  
+            });
 
-            
 
-            
 
-            
+
+
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -432,9 +432,9 @@
 
             $("body").wrapInner( "<div class='wrapper'></div>");
 
-        }, 
+        },
 
-        
+
 
 
 
@@ -456,17 +456,17 @@
 
                 getOut = getNav.find("ul.nav").data("out");
 
-            
+
 
             if( getWindow < 991 ){
 
-                
+
 
                 // Height of scroll navigation sidebar
 
                 $(".scroller").css("height", "auto");
 
-                
+
 
                 // Disable mouseenter event
 
@@ -474,13 +474,13 @@
 
                 $("nav.navbar.bootsnav ul.nav").find("li.dropdown").off("mouseleave");
 
-                $("nav.navbar.bootsnav ul.nav").find(".title").off("mouseenter"); 
+                $("nav.navbar.bootsnav ul.nav").find(".title").off("mouseenter");
 
-                $("nav.navbar.bootsnav ul.nav").off("mouseleave");    
+                $("nav.navbar.bootsnav ul.nav").off("mouseleave");
 
                 $(".navbar-collapse").removeClass("animated");
 
-                
+
 
                 // Enable click event
 
@@ -490,7 +490,7 @@
 
                     $(".dropdown-menu", this).removeClass(getOut);
 
-                    
+
 
                     // Dropdown Fade Toggle
 
@@ -502,13 +502,13 @@
 
                         $(this).closest("li.dropdown").find(".dropdown-menu").first().stop().fadeToggle().toggleClass(getIn);
 
-                        $(this).closest("li.dropdown").first().toggleClass("on");                        
+                        $(this).closest("li.dropdown").first().toggleClass("on");
 
                         return false;
 
-                    });   
+                    });
 
-                    
+
 
                     // Hidden dropdown action
 
@@ -560,11 +560,11 @@
 
                         });
 
-                    });  
+                    });
 
-                }); 
+                });
 
-                
+
 
                 // Hidden dropdown
 
@@ -584,7 +584,7 @@
 
                 }
 
-                
+
 
                 // Hidden om mouse leave
 
@@ -594,17 +594,17 @@
 
                 });
 
-                
+
 
                 // Enable click atribute navigation
 
-                $("nav.navbar.bootsnav .attr-nav").each(function(){  
+                $("nav.navbar.bootsnav .attr-nav").each(function(){
 
                     $(".dropdown-menu", this).removeClass("animated");
 
                     $("li.dropdown", this).off("mouseenter");
 
-                    $("li.dropdown", this).off("mouseleave");                    
+                    $("li.dropdown", this).off("mouseleave");
 
                     $("a.dropdown-toggle", this).off('click');
 
@@ -628,7 +628,7 @@
 
                     });
 
-                    
+
 
                     $(this).on("mouseleave", function(){
 
@@ -642,7 +642,7 @@
 
                 });
 
-                
+
 
                 // Toggle Bars
 
@@ -670,7 +670,7 @@
 
                 $(".scroller").css("height", getHeight + "px");
 
-                
+
 
                 // Navbar Sidebar
 
@@ -678,7 +678,7 @@
 
                     // Hover effect Sidebar Menu
 
-                    $("nav.navbar.bootsnav ul.nav").each(function(){  
+                    $("nav.navbar.bootsnav ul.nav").each(function(){
 
                         $("a.dropdown-toggle", this).off('click');
 
@@ -686,7 +686,7 @@
 
                             e.stopPropagation();
 
-                        }); 
+                        });
 
 
 
@@ -704,7 +704,7 @@
 
                         });
 
-                        
+
 
                         $(".col-menu").each(function(){
 
@@ -722,7 +722,7 @@
 
                         });
 
-                        
+
 
                         $(this).on("mouseleave", function(){
 
@@ -740,13 +740,13 @@
 
                         });
 
-                    }); 
+                    });
 
                 }else{
 
                     // Hover effect Default Menu
 
-                    $("nav.navbar.bootsnav ul.nav").each(function(){  
+                    $("nav.navbar.bootsnav ul.nav").each(function(){
 
                         $("a.dropdown-toggle", this).off('click');
 
@@ -754,7 +754,7 @@
 
                             e.stopPropagation();
 
-                        }); 
+                        });
 
 
 
@@ -814,7 +814,7 @@
 
                 }
 
-                
+
 
                 // ------------------------------------------------------------------------------ //
 
@@ -822,7 +822,7 @@
 
                 // ------------------------------------------------------------------------------ //
 
-                $("nav.navbar.bootsnav .attr-nav").each(function(){                      
+                $("nav.navbar.bootsnav .attr-nav").each(function(){
 
                     $("a.dropdown-toggle", this).off('click');
 
@@ -830,9 +830,9 @@
 
                         e.stopPropagation();
 
-                    }); 
+                    });
 
-                    
+
 
                     $(".dropdown-menu", this).addClass("animated");
 
@@ -878,7 +878,7 @@
 
             }
 
-            
+
 
             // ------------------------------------------------------------------------------ //
 
@@ -900,7 +900,7 @@
 
                 $(".wrap-full-menu").css("width", windowWidth + "px");
 
-                
+
 
                 $(".navbar-collapse").addClass("animated");
 
@@ -924,7 +924,7 @@
 
                     });
 
-                    
+
 
                     $("li.close-full-menu").on("click", function(e){
 
@@ -950,7 +950,7 @@
 
         },
 
-        
+
 
         // ------------------------------------------------------------------------------ //
 
@@ -958,31 +958,31 @@
 
         // ------------------------------------------------------------------------------ //
 
-        navbarSticky : function(){  
+        navbarSticky : function(){
 
             var getNav = $("nav.navbar.bootsnav"),
 
                 navSticky = getNav.hasClass("navbar-sticky");
 
-            
+
 
             if( navSticky ){
 
-                
+
 
                 // Set Height Navigation
 
-                var getHeight = getNav.height();             
+                var getHeight = getNav.height();
 
                 $(".wrap-sticky").height(getHeight);
 
-                
+
 
                 // Windown on scroll
 
                 var getOffset = $(".wrap-sticky").offset().top;
 
-                $(window).on("scroll", function(){  
+                $(window).on("scroll", function(){
 
                     var scrollTop = $(window).scrollTop();
 
@@ -998,11 +998,11 @@
 
                 });
 
-            }   
+            }
 
         },
 
-        
+
 
         // ------------------------------------------------------------------------------ //
 
@@ -1010,23 +1010,23 @@
 
         // ------------------------------------------------------------------------------ //
 
-        navbarScrollspy : function(){ 
+        navbarScrollspy : function(){
 
             var navScrollSpy = $(".navbar-scrollspy"),
 
-                $body   = $('body'), 
+                $body   = $('body'),
 
                 getNav = $('nav.navbar.bootsnav'),
 
                 offset  = getNav.outerHeight();
 
-            
+
 
             if( navScrollSpy.length ){
 
                 $body.scrollspy({target: '.navbar', offset: offset });
 
-                
+
 
                 // Animation Scrollspy
 
@@ -1078,7 +1078,7 @@
 
                         $speed = getNav.data("speed");
 
-                    
+
 
                     if( $window > 992 ){
 
@@ -1088,9 +1088,9 @@
 
                         var $position = $section - $minusMobile;
 
-                    }             
+                    }
 
-                        
+
 
                     $('html, body').stop().animate({
 
@@ -1100,7 +1100,7 @@
 
                 });
 
-                
+
 
                 // Activate Navigation
 
@@ -1122,7 +1122,7 @@
 
                 }
 
-                
+
 
                 // Activate Navigation on resize
 
@@ -1142,7 +1142,7 @@
 
     };
 
-    
+
 
     // Initialize
 
@@ -1152,11 +1152,11 @@
 
     });
 
-    
+
 
     // Reset on resize
 
-    $(window).on("resize", function(){   
+    $(window).on("resize", function(){
 
         bootsnav.hoverDropdown();
 
@@ -1166,7 +1166,7 @@
 
         }, 500);
 
-        
+
 
         // Toggle Bars
 
@@ -1178,17 +1178,17 @@
 
             $(this).removeClass("fixed");
 
-        });        
+        });
 
         $(".navbar-collapse").removeClass("in");
 
         $(".navbar-collapse").removeClass("on");
 
-        $(".navbar-collapse").removeClass("bounceIn");      
+        $(".navbar-collapse").removeClass("bounceIn");
 
     });
 
-    
+
 
 }(jQuery));
 
