@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Books Catalog</title>
+    <!-- Link the XSLT file -->
+    <link rel="stylesheet" href="transform.xslt">
+</head>
+
+<body>
+    <!-- Include a placeholder where the transformed content will be displayed -->
+    <div id="content"></div>
+    <script>
+        // Use JavaScript to load and transform the XML file with the XSLT file
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var xml = this.responseXML;
+                var xsl = new XMLHttpRequest();
+                xsl.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var xsltProcessor = new XSLTProcessor();
+                        xsltProcessor.importStylesheet(this.responseXML);
+                        var resultDocument = xsltProcessor.transformToFragment(xml, document);
+                        document.getElementById("content").appendChild(resultDocument);
+                    }
+                };
+                xsl.open("GET", "transform.xslt", true);
+                xsl.send();
+            }
+        };
+        xhttp.open("GET", "library.xml", true);
+        xhttp.send();
+    </script>
+</body>
+
+</html>

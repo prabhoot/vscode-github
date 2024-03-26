@@ -1,0 +1,53 @@
+You can use JavaScript to get various information about the browser and display it on a webpage. Here's a simple
+example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Information</title>
+</head>
+
+<body>
+    <h1>Browser Information</h1>
+    <ul id="browserInfo">
+        <!-- Browser information will be displayed here -->
+    </ul>
+
+    <script>
+        // Function to get browser information
+        function getBrowserInfo() {
+            var info = [];
+            info.push("Browser Name: " + navigator.appName);
+            info.push("Browser Version: " + navigator.appVersion);
+            info.push("User Agent: " + navigator.userAgent);
+            info.push("Platform: " + navigator.platform);
+            info.push("Cookies Enabled: " + navigator.cookieEnabled);
+            info.push("Online Status: " + navigator.onLine);
+            return info;
+        }
+
+        // Display browser information on the webpage
+        function displayBrowserInfo() {
+            var browserInfo = getBrowserInfo();
+            var ul = document.getElementById("browserInfo");
+            for (var i = 0; i < browserInfo.length; i++) {
+                var li = document.createElement("li");
+                li.textContent = browserInfo[i];
+                ul.appendChild(li);
+            }
+        }
+
+        // Call the function to display browser information when the page loads
+        window.onload = displayBrowserInfo;
+    </script>
+</body>
+
+</html>
+```
+
+This code will display various information about the browser such as its name, version, user agent, platform, whether
+cookies are enabled, and whether the browser is online.

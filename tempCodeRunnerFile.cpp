@@ -1,25 +1,12 @@
-//unary operator overload
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-class num{
-    int a;
-    public:
-        void setnum(int x){
-            a=x;
-        }
-        void printnum(){
-            cout<<a;
-        }
-        friend void operator-(num &);
-};
-void num::operator-(num &s){
-    s.a=-a;
-};
-int main(){
-    num s;
-    s.setnum(10);
-    s.printnum();
-    -s;
-    s.printnum();
+
+signed main() {
+
+int a=10;
+int *b=&a;
+int **c=&b;
+cout<<*c<<endl;
+cout<<&a;
     return 0;
 }

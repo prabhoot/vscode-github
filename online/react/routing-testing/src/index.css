@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    background-color: slategray;
+    border-radius: 90px;
+    padding: 10px;
+    width: 80px;
+    height: 45px;
+}
+
+@layer components {
+    .active {
+        @apply bg-green-400
+    }
+
+    .sidebar1 {
+        @apply flex justify-center transition hover:ease-in hover:font-semibold
+    }
+
+    .sidebar2 {
+        @apply flex items-center justify-center h-[45px]
+    }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function f() {
+            var i = document.getElementsByTagName("input");
+            console.log(i[0].value.length);
+            if (i[0].value.length <= 2) {return result = false;}
+        }
+    </script>
+</head>
+
+<body>
+    <form action="registration.php" method="get" onsubmit="return f()">
+        name <input type="text" name="user name" />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>

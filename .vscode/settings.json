@@ -169,7 +169,7 @@
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
   "files.autoSaveDelay": 100,
-  "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
     "source.sortImports": "always"
@@ -204,5 +204,13 @@
     "totalzip"
   ],
   "editor.minimap.renderCharacters": false,
+  // "prettier.configPath": "",
+  "reactSnippets.settings.prettierEnabled": true,
+  "tailwind-class-sorter.classRegex": {
+   "rescript": [
+      "className\\w*?=\\w*(\"[\\s\\S]+?\")|className\\w*?=\\w*?\\{([\\s\\S]+?)\\}",
+      "\"(.+?)\""
+    ]
+  }
 
 }

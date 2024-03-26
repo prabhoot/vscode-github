@@ -1,0 +1,66 @@
+<!-- Write an HTML page that contains a selection box with a list of 5 countries. When the user selects a country, its capital should be printed next in the list. Add CSS to customize the properties of the font of the capital (color,bold and font size -->
+<!DOCTYPE html>
+
+<head>
+    <title>Country Capitals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        select,
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        #capital {
+            color: rgb(229, 47, 226);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Country Capitals</h2>
+    <select id="countrySelect" placeholder="select an country" onchange="showCapital()">
+        <option value="IN">INDIA</option>
+        <option value="UK">United Kingdom</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="Japan">Japan</option>
+    </select>
+    <p>Capital: <span id="capital"></span></p>
+
+    <script>
+        function showCapital() {
+            var countrySelect = document.getElementById("countrySelect");
+            var capitalSpan = document.getElementById("capital");
+            var capital;
+
+            switch (countrySelect.value) {
+                case "IN":
+                    capital = "NEW DELHI";
+                    break;
+                case "UK":
+                    capital = "London";
+                    break;
+                case "France":
+                    capital = "Paris";
+                    break;
+                case "Germany":
+                    capital = "Berlin";
+                    break;
+                case "Japan":
+                    capital = "Tokyo";
+                    break;
+                default:
+                    capital = "Unknown";
+            }
+
+            capitalSpan.textContent = capital;
+        }
+    </script>
+</body>
+
+</html>
