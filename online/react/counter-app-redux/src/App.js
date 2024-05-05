@@ -1,9 +1,12 @@
-import Main from './components/Main';
+import './App.css';
+import Counter from './components/Counter';
+
 function App() {
   return (
     <div className="App">
-      <Main />
+     <Counter/>
     </div>
   );
 }
+
 export default App;
