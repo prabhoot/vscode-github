@@ -9,38 +9,20 @@
   "C_Cpp_Runner.cStandard": "",
   "C_Cpp_Runner.cppStandard": "",
   "C_Cpp_Runner.useMsvc": false,
-  "C_Cpp_Runner.warnings": [
-    "-Wall",
-    "-Wextra",
-    "-Wpedantic",
-    "-Wshadow",
-    "-Wformat=2",
-    "-Wconversion",
-    "-Wnull-dereference",
-    "-Wsign-conversion"
-  ],
+  "C_Cpp_Runner.warnings": ["-Wall", "-Wextra", "-Wpedantic", "-Wshadow", "-Wformat=2", "-Wconversion", "-Wnull-dereference", "-Wsign-conversion"],
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
-  "C_Cpp_Runner.includeSearch": [
-    "*",
-    "**/*"
-  ],
-  "C_Cpp_Runner.excludeSearch": [
-    "**/build",
-    "**/build/**",
-    "**/.*",
-    "**/.*/**",
-    "**/.vscode",
-    "**/.vscode/**"
-  ],
+  "C_Cpp_Runner.includeSearch": ["*", "**/*"],
+  "C_Cpp_Runner.excludeSearch": ["**/build", "**/build/**", "**/.*", "**/.*/**", "**/.vscode", "**/.vscode/**"],
   "C_Cpp_Runner.useAddressSanitizer": false,
   "cmakeIntelliSence.loggingLevel": "Info",
   "cmakeIntelliSence.cmdCaseDiagnostics": "all",
   "prettier.bracketSameLine": true,
   "prettier.withNodeModules": true,
+  "prettier.singleQuote": true,
   "files.associations": {
     "iostream": "cpp",
     "cctype": "cpp",
@@ -138,7 +120,7 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": false,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": false,
   "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": false,
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
@@ -147,7 +129,7 @@
   "editor.fontSize": 14,
   "html.format.wrapAttributes": "auto",
   "prettier.printWidth": 300,
-  "prettier.jsxSingleQuote":true,
+  "prettier.jsxSingleQuote": true,
   "json.format.enable": true,
   "editor.minimap.autohide": false,
   "editor.hover.enabled": true,
@@ -200,17 +182,11 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "totalzip"
-  ],
+  "cSpell.words": ["totalzip"],
   "editor.minimap.renderCharacters": false,
   // "prettier.configPath": "",
   "reactSnippets.settings.prettierEnabled": true,
   "tailwind-class-sorter.classRegex": {
-   "rescript": [
-      "className\\w*?=\\w*(\"[\\s\\S]+?\")|className\\w*?=\\w*?\\{([\\s\\S]+?)\\}",
-      "\"(.+?)\""
-    ]
+    "rescript": ["className\\w*?=\\w*(\"[\\s\\S]+?\")|className\\w*?=\\w*?\\{([\\s\\S]+?)\\}", "\"(.+?)\""]
   }
-
 }
