@@ -11,12 +11,13 @@ confidence = 0.8
 save = True
 blurThreshold = 35  # Larger is more focus
 
-debug = False #data will be shown on true 
+debug = False
 offsetPercentageW = 10
 offsetPercentageH = 20
 camWidth, camHeight = 640, 480
 floatingPoint = 6
 ####################################
+
 
 cap = cv2.VideoCapture(0)
 cap.set(3, camWidth)
@@ -91,7 +92,7 @@ while True:
 
         # ------  To Save --------
         if save:
-            if all(listBlur) and listBlur!= []:
+            if all(listBlur) and listBlur != []:
                 # ------  Save Image  --------
                 timeNow = time()
                 timeNow = str(timeNow).split('.')

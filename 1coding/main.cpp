@@ -1,22 +1,36 @@
 #include <bits/stdc++.h>
+//Prabhoot
+//#include <boost/multiprecision/cpp_int.hpp>//int1024_t n
+//using namespace boost::multiprecision;
+//ctrl+shift+r then ctrl+i
+//lower_bound(arr.begin(),arr.end(),x)-arr.begin();// will return an index;
+#define int long long
+const int MOD=1e9+7;
+const int INF=LLONG_MAX>>1;
+#define endl '\n'
+#define all(x) (x).begin(),(x).end()
+#define ndigits(a) (int)log10(a)+1
+#define bitcnt(x) __builtin_popcountll(x);
+#define pnr(s) do{cout<<s<<endl;}while(next_permutation(all(s)));
+#define iv int n=0;cin>>n;vector<int>v(n); f(i,n) cin>>v[i];
+#define nv vector<int>v;int temp=0;while(cin>>temp){v.push_back(temp);if(cin.get()=='\n'){break;}} int n=v.size();
+#define pv(v) for(auto i:v){cout<<i<<" ";};
+#define pm(a) for(auto i:a){for(auto j:i){cout<<j<<" ";}cout<<endl;}
+#define io ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define isPrime(x) int count=0;for(int i=0;i<sqrt(n);i++){(n%i==0)&&((n/i==i)?count++:(count+=2));(count>2)?(return false):(return true)}
+#define ncr(n, r) ({ int _n = (n), _r = (r), p = 1, k = 1; _r = min(_r, _n - _r); if (_r != 0) { while (_r) { p *= _n; k *= _r; int m = __gcd(p, k); p /= m; k /= m; _n--; _r--; } } else { 1; } p; })
+//map returns 0 for element that don't exist
 using namespace std;
-int main(){
-    int n;
-	    cin>>n;
-	    string v(n,0);
-	       cin>>v;
-	    vector<int> ans;
-	    int temp=0;
-	    int j=0;
-	    for(int i=n-1;i>=0;i--){
-	        temp+=pow(2*j,(v[i]));
-	        if(v[i]=='1'){
-	            ans.push_back(temp);
-	        }
-	        j++;
-	    }
-	    cout<<ans.size()<<endl;
-	    for(auto i:ans){
-	        cout<<i<<" ";
-	    }
-	}
+void print_divisors(int n){
+    cout<<"1 ";
+    for(int i=2;i<=n;i++){
+        if(n%i==0){
+            cout<<i<<" ";
+        }
+    }
+}
+signed main(){
+// freopen("input.txt","r",stdin);
+    io;
+    print_divisors(100);
+}
