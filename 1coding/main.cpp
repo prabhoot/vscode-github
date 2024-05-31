@@ -3,12 +3,11 @@
 //#include <boost/multiprecision/cpp_int.hpp>//int1024_t n
 //using namespace boost::multiprecision;
 //ctrl+shift+r then ctrl+i
-//lower_bound(arr.begin(),arr.end(),x)-arr.begin();// will return an index;
 #define int long long
 const int MOD=1e9+7;
 const int INF=LLONG_MAX>>1;
 #define endl '\n'
-#define all(x) (x).begin(),(x).end()
+#define all(x) (x).begin(), (x).end()
 #define ndigits(a) (int)log10(a)+1
 #define bitcnt(x) __builtin_popcountll(x);
 #define pnr(s) do{cout<<s<<endl;}while(next_permutation(all(s)));
@@ -21,16 +20,36 @@ const int INF=LLONG_MAX>>1;
 #define ncr(n, r) ({ int _n = (n), _r = (r), p = 1, k = 1; _r = min(_r, _n - _r); if (_r != 0) { while (_r) { p *= _n; k *= _r; int m = __gcd(p, k); p /= m; k /= m; _n--; _r--; } } else { 1; } p; })
 //map returns 0 for element that don't exist
 using namespace std;
-void print_divisors(int n){
-    cout<<"1 ";
-    for(int i=2;i<=n;i++){
-        if(n%i==0){
-            cout<<i<<" ";
-        }
+struct node{
+	int value;
+	node *left=NULL;
+	node *right=NULL;
+    node() : value(0), left(nullptr), right(nullptr) {}
+    node(int x) : value(x), left(nullptr), right(nullptr) {}
+    node(int x,node *l,node *r) : value(0), left(l), right(r) {}
+};
+
+vector<int>ans;
+int my(node *root,node *p,node *q){
+    if(!root || root==p || root==q)return root;
+    node *left=my(root->left,p,q);
+    node *right=my(root->right,p,q);
+    if(left==NULL)return right;
+    else if(right==NULL)return left;
+    else{
+        return root;
     }
 }
+
 signed main(){
 // freopen("input.txt","r",stdin);
     io;
-    print_divisors(100);
+    struct node *start=new node(1);
+    start->left=new node(2);
+    start->right=new node(3);
+    start->left->left=new node(4);
+    start->left->right=new node(5);
+    start->right->left=new node(6);
+    start->right->right=new node(6);
+    my(start,2,6);
 }
