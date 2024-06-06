@@ -13,7 +13,7 @@ const app=express();
 
 require("dotenv").config();// i forget to add .config at the end.
 
-const PORT=process.env.PORT ||4000 ;
+const PORT=process.env.PORT || 4000 ;
 
 const bodyParser=require("body-parser");
 const dbConnect = require("./config/database");
